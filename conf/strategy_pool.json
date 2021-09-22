@@ -1,0 +1,50 @@
+[
+  {
+    "pool_index_prefix": "pool_lv1",
+    "priority": 1,
+    "base_percentage": 0.1,
+    "pool_recall_size": 200,
+    "small_flow": {
+
+    },
+    "pool_level": [
+      "high"
+    ],
+    "exclude": [
+
+    ],
+    "description": "1级策略池子"
+  },
+  {
+    "pool_index_prefix": "pool_lv2",
+    "priority": 2,
+    "base_percentage": 0.1,
+    "pool_recall_size": 200,
+    "small_flow": {
+
+    },
+    "pool_level": [
+      "high"
+    ],
+    "exclude": [
+
+    ],
+    "description": "2级策略池子"
+  },
+  {
+    "pool_index_prefix": "pool_lv3",
+    "priority": 3,
+    "base_percentage": 0.1,
+    "pool_recall_size": 200,
+    "small_flow": {
+
+    },
+    "pool_level": [
+      "high"
+    ],
+    "exclude": [
+
+    ],
+    "description": "3级策略池子"
+  }
+]

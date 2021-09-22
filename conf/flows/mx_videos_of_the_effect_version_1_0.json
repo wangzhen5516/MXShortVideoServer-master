@@ -1,0 +1,37 @@
+{
+  "range": {
+    "0-9999": "mx_videos_of_the_effect_version_1_0"
+  },
+  "flow": {
+    "mx_videos_of_the_effect_version_1_0": {
+      "rankModel": "",
+      "ranker": "EffectTopVideoRanker",
+      "recall": [
+        "EffectVideoRecall",
+        "ManualTopEffectVideoRecall"
+      ],
+      "filter": [
+        "DeleteFilter",
+        "OfflineStatusFilter",
+        "ViewPrivacyFilter",
+        "CountryFilter",
+        "BlockFilter",
+        "PrivateAccountFilter",
+        "UGCSensitiveContentFilter",
+        "IplFilter",
+        "OriginalFilter",
+        "RepeatedResultFilter"
+      ],
+      "ruler": [],
+      "mixer": [],
+      "getFeature": [],
+      "scorer": [],
+      "adjuster": [],
+      "cache": [],
+      "cacheForRecall": [
+        "VideosOfEffectCache"
+      ],
+      "packer": "Mx_Recommend_Other_Packer"
+    }
+  }
+}

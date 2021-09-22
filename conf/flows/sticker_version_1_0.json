@@ -1,0 +1,23 @@
+{
+  "range": {
+    "0-9999": "sticker_version_1_0"
+  },
+  "flow": {
+    "sticker_version_1_0": {
+      "rankModel": "",
+      "ranker": "",
+      "recall": [
+        "StickerRecall"
+      ],
+      "filter": [],
+      "ruler": [],
+      "mixer": [],
+      "getFeature": [],
+      "scorer": [],
+      "adjuster": [],
+      "cache": [],
+      "cacheForRecall": [],
+      "packer": "MX_Recommend_Sticker_Packer"
+    }
+  }
+}

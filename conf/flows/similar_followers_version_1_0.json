@@ -1,0 +1,23 @@
+{
+  "range": {
+    "0-9999": "similar_followers_version_1_0"
+  },
+  "flow": {
+    "similar_followers_version_1_0": {
+      "rankModel": "",
+      "ranker": "",
+      "recall": [
+        "SimilarFollowersRecall"
+      ],
+      "filter": [],
+      "ruler": [],
+      "mixer": [],
+      "getFeature": [],
+      "scorer": [],
+      "adjuster": [],
+      "cache": [],
+      "cacheForRecall": [],
+      "packer": ""
+    }
+  }
+}

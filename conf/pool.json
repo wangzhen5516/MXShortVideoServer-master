@@ -1,0 +1,1172 @@
+[
+    {
+        "pool_index": "taka_flowpool_lv1",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "low"
+        ],
+        "priority": 1,
+        "percentage": 0.00085,
+        "pool_recall_size": 400,
+        "small_flow": {
+            "C_1000_1499": {
+                "percentage": 0
+            }
+        },
+        "general_tags": [
+            
+        ],
+        "niche_tags": [
+            "food",
+            "car",
+            "bts",
+            "pubg",
+            "korea",
+            "japan"
+        ],
+        "description": "1级池子",
+        "sort_field": "",
+        "is_tophot_history": false
+    },
+    {
+        "pool_index": "taka_flowpool_lv1_v2",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "low"
+        ],
+        "priority": -1,
+        "percentage": 0.002,
+        "pool_recall_size": 200,
+        "small_flow": {
+            
+        },
+        "general_tags": [
+            
+        ],
+        "niche_tags": [
+            "food",
+            "car",
+            "bts",
+            "pubg",
+            "korea",
+            "japan"
+        ],
+        "description": "1级池子v2",
+        "sort_field": "",
+        "is_tophot_history": false
+    },
+    {
+        "pool_index": "taka_flowpool_lv1_v3",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "low"
+        ],
+        "priority": -11,
+        "percentage": 0.00015,
+        "pool_recall_size": 200,
+        "small_flow": {
+            
+        },
+        "general_tags": [
+            
+        ],
+        "niche_tags": [
+            "food",
+            "car",
+            "bts",
+            "pubg",
+            "korea",
+            "japan"
+        ],
+        "description": "1级池子v3",
+        "sort_field": "",
+        "is_tophot_history": false
+    },
+    {
+        "pool_index": "taka_flowpool_lv1_v5",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "low"
+        ],
+        "priority": -31,
+        "percentage": 0.0006,
+        "pool_recall_size": 200,
+        "small_flow": {
+            
+        },
+        "general_tags": [
+            
+        ],
+        "niche_tags": [
+            "food",
+            "car",
+            "bts",
+            "pubg",
+            "korea",
+            "japan"
+        ],
+        "description": "1级池子v5",
+        "sort_field": "",
+        "is_tophot_history": false
+    },
+    {
+        "pool_index": "taka_flowpool_lv1_v8",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "low"
+        ],
+        "priority": -51,
+        "percentage": 0.0008,
+        "pool_recall_size": 200,
+        "small_flow": {
+            
+        },
+        "general_tags": [
+            
+        ],
+        "niche_tags": [
+            "food",
+            "car",
+            "bts",
+            "pubg",
+            "korea",
+            "japan"
+        ],
+        "description": "1级池子v8",
+        "sort_field": "",
+        "is_tophot_history": false
+    },
+    {
+        "pool_index": "taka_flowpool_lv1_v10",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "low"
+        ],
+        "priority": -61,
+        "percentage": 0.00058,
+        "pool_recall_size": 200,
+        "small_flow": {
+            
+        },
+        "general_tags": [
+            
+        ],
+        "niche_tags": [
+            "food",
+            "car",
+            "bts",
+            "pubg",
+            "korea",
+            "japan"
+        ],
+        "description": "1级池子v10",
+        "sort_field": "",
+        "is_tophot_history": false
+    },
+    {
+        "pool_index": "taka_flowpool_lv1_v11",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "low"
+        ],
+        "priority": -71,
+        "percentage": 0.003,
+        "pool_recall_size": 200,
+        "small_flow": {
+            
+        },
+        "general_tags": [
+            
+        ],
+        "niche_tags": [
+            "food",
+            "car",
+            "bts",
+            "pubg",
+            "korea",
+            "japan"
+        ],
+        "description": "1级池子v11",
+        "sort_field": "",
+        "is_tophot_history": false
+    },
+    {
+        "pool_index": "taka_flowpool_lv1_v12",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "low"
+        ],
+        "priority": -81,
+        "percentage": 0.00015,
+        "pool_recall_size": 200,
+        "small_flow": {
+            
+        },
+        "general_tags": [
+            
+        ],
+        "niche_tags": [
+            "food",
+            "car",
+            "bts",
+            "pubg",
+            "korea",
+            "japan"
+        ],
+        "description": "1级池子v12",
+        "sort_field": "",
+        "is_tophot_history": false
+    },
+    {
+        "pool_index": "taka_flowpool_lv1_v13",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "low"
+        ],
+        "priority": -91,
+        "percentage": 0.00015,
+        "pool_recall_size": 200,
+        "small_flow": {
+            
+        },
+        "general_tags": [
+            
+        ],
+        "niche_tags": [
+            "food",
+            "car",
+            "bts",
+            "pubg",
+            "korea",
+            "japan"
+        ],
+        "description": "1级池子v13",
+        "sort_field": "",
+        "is_tophot_history": false
+    },
+    {
+        "pool_index": "taka_flowpool_lv1_v14",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "low"
+        ],
+        "priority": -101,
+        "percentage": 0.00085,
+        "pool_recall_size": 200,
+        "small_flow": {
+            
+        },
+        "general_tags": [
+            
+        ],
+        "niche_tags": [
+            "food",
+            "car",
+            "bts",
+            "pubg",
+            "korea",
+            "japan"
+        ],
+        "description": "1级池子v14",
+        "sort_field": "",
+        "is_tophot_history": false
+    },
+    {
+        "pool_index": "taka_flowpool_lv2",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "low"
+        ],
+        "priority": 2,
+        "percentage": 0.0006,
+        "pool_recall_size": 200,
+        "small_flow": {
+            "C_1000_1499": {
+                "percentage": 0
+            },
+            "L_5500_5999": {
+                "pool_recall_size": 30,
+                "sort_field": "enter_time"
+            },
+            "M_6000_6499": {
+                "pool_recall_size": 30,
+                "sort_field": "enter_time"
+            }
+        },
+        "general_tags": [
+            
+        ],
+        "niche_tags": [
+            "food",
+            "car",
+            "bts",
+            "pubg",
+            "korea",
+            "japan"
+        ],
+        "description": "2级池子",
+        "sort_field": "",
+        "is_tophot_history": false
+    },
+    {
+        "pool_index": "taka_flowpool_lv2_v2",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "low"
+        ],
+        "priority": -2,
+        "percentage": 0.0002,
+        "pool_recall_size": 200,
+        "small_flow": {
+            "C_1000_1499": {
+                "percentage": 0
+            }
+        },
+        "general_tags": [
+            
+        ],
+        "niche_tags": [
+            "food",
+            "car",
+            "bts",
+            "pubg",
+            "korea",
+            "japan"
+        ],
+        "description": "2_v2级池子",
+        "sort_field": "",
+        "is_tophot_history": false
+    },
+    {
+        "pool_index": "taka_flowpool_lv2_v3",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "low"
+        ],
+        "priority": -12,
+        "percentage": 0.00005,
+        "pool_recall_size": 200,
+        "small_flow": {
+            "C_1000_1499": {
+                "percentage": 0
+            }
+        },
+        "general_tags": [
+            
+        ],
+        "niche_tags": [
+            "food",
+            "car",
+            "bts",
+            "pubg",
+            "korea",
+            "japan"
+        ],
+        "description": "2_v3级池子",
+        "sort_field": "",
+        "is_tophot_history": false
+    },
+    {
+        "pool_index": "taka_flowpool_lv3",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "low",
+            "high"
+        ],
+        "priority": 3,
+        "percentage": 0.0007,
+        "pool_recall_size": 500,
+        "small_flow": {
+            "C_1000_1499": {
+                "percentage": 0
+            },
+            "L_5500_5999": {
+                "pool_recall_size": 30,
+                "sort_field": "enter_time"
+            },
+            "M_6000_6499": {
+                "pool_recall_size": 30,
+                "sort_field": "enter_time"
+            },
+            "N_6500_6999": {
+                "pool_recall_size": 30,
+                "sort_field": "enter_time"
+            },
+            "O_7000_7499": {
+                "pool_recall_size": 30,
+                "sort_field": "enter_time"
+            },
+            "P_7500_7999": {
+                "pool_recall_size": 30,
+                "sort_field": "enter_time"
+            },
+            "R_8500_8999": {
+                "pool_recall_size": 30,
+                "sort_field": "enter_time"
+            }
+        },
+        "sort_field": "",
+        "description": "3级池子",
+        "is_tophot_history": false
+    },
+    {
+        "pool_index": "taka_flowpool_lv3_v2",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "low"
+        ],
+        "priority": -3,
+        "percentage": 0.012,
+        "pool_recall_size": 500,
+        "small_flow": {
+            "C_1000_1499": {
+                "percentage": 0
+            }
+        },
+        "general_tags": [
+            
+        ],
+        "niche_tags": [
+            "food",
+            "car",
+            "bts",
+            "pubg",
+            "korea",
+            "japan"
+        ],
+        "sort_field": "",
+        "description": "3_v2级池子",
+        "is_tophot_history": false
+    },
+    {
+        "pool_index": "taka_flowpool_lv3_v3",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "low"
+        ],
+        "priority": -13,
+        "percentage": 0.00005,
+        "pool_recall_size": 500,
+        "small_flow": {
+            "C_1000_1499": {
+                "percentage": 0
+            }
+        },
+        "general_tags": [
+            
+        ],
+        "niche_tags": [
+            "food",
+            "car",
+            "bts",
+            "pubg",
+            "korea",
+            "japan"
+        ],
+        "sort_field": "",
+        "description": "3_v3级池子",
+        "is_tophot_history": false
+    },
+    {
+        "pool_index": "taka_flowpool_lv4",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "low",
+            "high"
+        ],
+        "priority": 4,
+        "percentage": 0.0016,
+        "pool_recall_size": 400,
+        "small_flow": {
+            "C_1000_1499": {
+                "percentage": 0
+            },
+            "E_2000_2499": {
+                "sort_field": ""
+            }
+        },
+        "sort_field": "enter_time",
+        "description": "4级池子",
+        "is_tophot_history": false
+    },
+    {
+        "pool_index": "taka_flowpool_lv4_v2",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "low"
+        ],
+        "priority": -4,
+        "percentage": 0.012,
+        "pool_recall_size": 400,
+        "small_flow": {
+            "C_1000_1499": {
+                "percentage": 0
+            }
+        },
+        "general_tags": [
+            
+        ],
+        "niche_tags": [
+            "food",
+            "car",
+            "bts",
+            "pubg",
+            "korea",
+            "japan"
+        ],
+        "sort_field": "",
+        "description": "4_v2级池子",
+        "is_tophot_history": false
+    },
+    {
+        "pool_index": "taka_flowpool_lv4_v3",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "low"
+        ],
+        "priority": -14,
+        "percentage": 0.00005,
+        "pool_recall_size": 400,
+        "small_flow": {
+            "C_1000_1499": {
+                "percentage": 0
+            }
+        },
+        "general_tags": [
+            
+        ],
+        "niche_tags": [
+            "food",
+            "car",
+            "bts",
+            "pubg",
+            "korea",
+            "japan"
+        ],
+        "sort_field": "",
+        "description": "4_v3级池子",
+        "is_tophot_history": false
+    },
+    {
+        "pool_index": "taka_flowpool_lv5",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "low",
+            "high"
+        ],
+        "priority": 5,
+        "percentage": 1e-8,
+        "pool_recall_size": 400,
+        "small_flow": {
+            
+        },
+        "sort_field": "",
+        "description": "5级池子",
+        "is_tophot_history": true
+    },
+    {
+        "pool_index": "taka_flowpool_lv6",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "low",
+            "high"
+        ],
+        "priority": 6,
+        "percentage": 1e-8,
+        "pool_recall_size": 400,
+        "small_flow": {
+            
+        },
+        "sort_field": "",
+        "description": "6级池子",
+        "is_tophot_history": true
+    },
+    {
+        "pool_index": "taka_flowpool_lv7_v6",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "high"
+        ],
+        "priority": 7,
+        "percentage": 1,
+        "pool_recall_size": 1000,
+        "small_flow": {
+            "J_4500_4999": {
+                "pool_index": "taka_flowpool_lv7_v2",
+                "sort_field": "heat_4",
+                "sort_field_new": [
+                    {
+                        "heat_4": {
+                            "missing": 0,
+                            "order": "desc"
+                        }
+                    }
+                ],
+                "ignore_filter": [
+                    
+                ]
+            }
+        },
+        "sort_field": "",
+        "description": "7级池子",
+        "is_tophot_history": true
+    },
+    {
+        "pool_index": "taka_flowpool_lv8_v6",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "high"
+        ],
+        "priority": 8,
+        "percentage": 1,
+        "pool_recall_size": 1000,
+        "small_flow": {
+            "J_4500_4999": {
+                "pool_index": "taka_flowpool_lv8_v2",
+                "sort_field": "heat_4",
+                "sort_field_new": [
+                    {
+                        "heat_4": {
+                            "missing": 0,
+                            "order": "desc"
+                        }
+                    }
+                ],
+                "ignore_filter": [
+                    
+                ]
+            }
+        },
+        "sort_field": "",
+        "description": "8级池子",
+        "is_tophot_history": true
+    },
+    {
+        "pool_index": "taka_flowpool_lv9_v6",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "high"
+        ],
+        "priority": 9,
+        "percentage": 1,
+        "pool_recall_size": 1000,
+        "small_flow": {
+            "Q_8000_8499": {
+                "pool_recall_size": 1000,
+                "sort_field": "heat_1",
+                "sort_field_new": [
+                    {
+                        "heat_1": {
+                            "missing": 0,
+                            "order": "desc"
+                        }
+                    }
+                ]
+            },
+            "S_9000_9499": {
+                "pool_recall_size": 1000,
+                "sort_field": "heat_3",
+                "sort_field_new": [
+                    {
+                        "heat_3": {
+                            "missing": 0,
+                            "order": "desc"
+                        }
+                    }
+                ]
+            },
+            "J_4500_4999": {
+                "pool_index": "taka_flowpool_lv9_v2",
+                "sort_field": "heat_4",
+                "sort_field_new": [
+                    {
+                        "heat_4": {
+                            "missing": 0,
+                            "order": "desc"
+                        }
+                    }
+                ],
+                "ignore_filter": [
+                    
+                ]
+            }
+        },
+        "sort_field": "heat_4",
+        "sort_field_new": [
+            {
+                "heat_4": {
+                    "missing": 0.0,
+                    "order": "desc"
+                }
+            }
+        ],
+        "description": "9级池子",
+        "is_tophot_history": true
+    },
+    {
+        "pool_index": "taka_flowpool_lv10_v6",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "high"
+        ],
+        "priority": 10,
+        "percentage": 1.0,
+        "pool_recall_size": 1000,
+        "small_flow": {
+            "Q_8000_8499": {
+                "pool_recall_size": 1000,
+                "sort_field": "heat_1",
+                "sort_field_new": [
+                    {
+                        "heat_1": {
+                            "missing": 0,
+                            "order": "desc"
+                        }
+                    }
+                ]
+            },
+            "S_9000_9499": {
+                "pool_recall_size": 1000,
+                "sort_field": "heat_3",
+                "sort_field_new": [
+                    {
+                        "heat_3": {
+                            "missing": 0,
+                            "order": "desc"
+                        }
+                    }
+                ]
+            },
+            "J_4500_4999": {
+                "pool_index": "taka_flowpool_lv10_v2",
+                "sort_field": "heat_4",
+                "sort_field_new": [
+                    {
+                        "heat_4": {
+                            "missing": 0,
+                            "order": "desc"
+                        }
+                    }
+                ],
+                "ignore_filter": [
+                    
+                ]
+            }
+        },
+        "sort_field": "heat_4",
+        "sort_field_new": [
+            {
+                "heat_4": {
+                    "missing": 0.0,
+                    "order": "desc"
+                }
+            }
+        ],
+        "description": "10级池子",
+        "is_tophot_history": true
+    },
+    {
+        "pool_index": "taka_flowpool_lv11_v6",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "high"
+        ],
+        "priority": 11,
+        "percentage": 1,
+        "pool_recall_size": 1500,
+        "ignore_filter": [
+            
+        ],
+        "small_flow": {
+            "Q_8000_8499": {
+                "pool_recall_size": 1000,
+                "sort_field": "heat_1",
+                "sort_field_new": [
+                    {
+                        "heat_1": {
+                            "missing": 0,
+                            "order": "desc"
+                        }
+                    }
+                ]
+            },
+            "S_9000_9499": {
+                "pool_recall_size": 1000,
+                "sort_field": "heat_3",
+                "sort_field_new": [
+                    {
+                        "heat_3": {
+                            "missing": 0,
+                            "order": "desc"
+                        }
+                    }
+                ]
+            },
+            "J_4500_4999": {
+                "pool_index": "taka_flowpool_lv11_v2",
+                "sort_field": "heat_4",
+                "sort_field_new": [
+                    {
+                        "heat_4": {
+                            "missing": 0,
+                            "order": "desc"
+                        }
+                    }
+                ],
+                "ignore_filter": [
+                    
+                ]
+            }
+        },
+        "sort_field": "heat_4",
+        "sort_field_new": [
+            {
+                "heat_4": {
+                    "missing": 0.0,
+                    "order": "desc"
+                }
+            }
+        ],
+        "description": "11级池子",
+        "is_tophot_history": true
+    },
+    {
+        "pool_index": "taka_flowpool_lv12_v6",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "high"
+        ],
+        "priority": 12,
+        "percentage": 1,
+        "pool_recall_size": 1500,
+        "small_flow": {
+            "J_4500_4999": {
+                "pool_index": "taka_flowpool_lv12_v2",
+                "sort_field": "heat_4",
+                "sort_field_new": [
+                    {
+                        "heat_4": {
+                            "missing": 0,
+                            "order": "desc"
+                        }
+                    }
+                ],
+                "ignore_filter": [
+                    
+                ]
+            }
+        },
+        "sort_field": "heat_4",
+        "sort_field_new": [
+            {
+                "heat_4": {
+                    "missing": 0,
+                    "order": "desc"
+                }
+            }
+        ],
+        "description": "12级池子",
+        "is_tophot_history": true
+    },
+    {
+        "pool_index": "taka_flowpool_lv13_v6",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "high"
+        ],
+        "priority": 13,
+        "percentage": 1,
+        "pool_recall_size": 1500,
+        "small_flow": {
+            "J_4500_4999": {
+                "pool_index": "taka_flowpool_lv13_v2",
+                "sort_field": "heat_4",
+                "sort_field_new": [
+                    {
+                        "heat_4": {
+                            "missing": 0,
+                            "order": "desc"
+                        }
+                    }
+                ],
+                "ignore_filter": [
+                    
+                ]
+            }
+        },
+        "sort_field": "heat_4",
+        "sort_field_new": [
+            {
+                "heat_4": {
+                    "missing": 0,
+                    "order": "desc"
+                }
+            }
+        ],
+        "description": "13级池子",
+        "is_tophot_history": true
+    },
+    {
+        "pool_index": "taka_flowpool_lv14_v6",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "high"
+        ],
+        "priority": 14,
+        "percentage": 1,
+        "pool_recall_size": 1500,
+        "small_flow": {
+            "J_4500_4999": {
+                "pool_index": "taka_flowpool_lv14_v2",
+                "sort_field": "heat_4",
+                "sort_field_new": [
+                    {
+                        "heat_4": {
+                            "missing": 0,
+                            "order": "desc"
+                        }
+                    }
+                ],
+                "ignore_filter": [
+                    
+                ]
+            }
+        },
+        "sort_field": "heat_4",
+        "sort_field_new": [
+            {
+                "heat_4": {
+                    "missing": 0,
+                    "order": "desc"
+                }
+            }
+        ],
+        "description": "14级池子",
+        "is_tophot_history": true
+    },
+    {
+        "pool_index": "taka_flowpool_lv15_v6",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "high"
+        ],
+        "priority": 15,
+        "percentage": 1,
+        "pool_recall_size": 1500,
+        "small_flow": {
+            "J_4500_4999": {
+                "pool_index": "taka_flowpool_lv15_v2",
+                "sort_field": "heat_4",
+                "sort_field_new": [
+                    {
+                        "heat_4": {
+                            "missing": 0,
+                            "order": "desc"
+                        }
+                    }
+                ],
+                "ignore_filter": [
+                    
+                ]
+            }
+        },
+        "sort_field": "heat_4",
+        "sort_field_new": [
+            {
+                "heat_4": {
+                    "missing": 0,
+                    "order": "desc"
+                }
+            }
+        ],
+        "description": "15级池子",
+        "is_tophot_history": true
+    },
+    {
+        "pool_index": "taka_flowpool_lv16",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "high"
+        ],
+        "priority": 16,
+        "percentage": 1,
+        "pool_recall_size": 1500,
+        "small_flow": {
+            "J_4500_4999": {
+                "pool_index": "taka_flowpool_lv16_v2",
+                "sort_field": "heat_4",
+                "sort_field_new": [
+                    {
+                        "heat_4": {
+                            "missing": 0,
+                            "order": "desc"
+                        }
+                    }
+                ],
+                "ignore_filter": [
+                    
+                ]
+            }
+        },
+        "sort_field": "heat_4",
+        "sort_field_new": [
+            {
+                "heat_4": {
+                    "missing": 0,
+                    "order": "desc"
+                }
+            }
+        ],
+        "description": "16级池子",
+        "is_tophot_history": true
+    },
+    {
+        "pool_index": "taka_flowpool_lv17",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "high"
+        ],
+        "priority": 17,
+        "percentage": 1,
+        "pool_recall_size": 1500,
+        "small_flow": {
+            "J_4500_4999": {
+                "pool_index": "taka_flowpool_lv17_v2",
+                "sort_field": "heat_4",
+                "sort_field_new": [
+                    {
+                        "heat_4": {
+                            "missing": 0,
+                            "order": "desc"
+                        }
+                    }
+                ],
+                "ignore_filter": [
+                    
+                ]
+            }
+        },
+        "sort_field": "heat_4",
+        "sort_field_new": [
+            {
+                "heat_4": {
+                    "missing": 0,
+                    "order": "desc"
+                }
+            }
+        ],
+        "description": "17级池子",
+        "is_tophot_history": true
+    },
+    {
+        "pool_index": "taka_flowpool_lv18",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "high"
+        ],
+        "priority": 18,
+        "percentage": 1,
+        "pool_recall_size": 1500,
+        "small_flow": {
+            "J_4500_4999": {
+                "pool_index": "taka_flowpool_lv18_v2",
+                "sort_field": "heat_4",
+                "sort_field_new": [
+                    {
+                        "heat_4": {
+                            "missing": 0,
+                            "order": "desc"
+                        }
+                    }
+                ],
+                "ignore_filter": [
+                    
+                ]
+            }
+        },
+        "sort_field": "heat_4",
+        "sort_field_new": [
+            {
+                "heat_4": {
+                    "missing": 0,
+                    "order": "desc"
+                }
+            }
+        ],
+        "description": "18级池子",
+        "is_tophot_history": true
+    },
+    {
+        "pool_index": "taka_flowpool_lv19",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "high"
+        ],
+        "priority": 19,
+        "percentage": 1,
+        "pool_recall_size": 1500,
+        "small_flow": {
+            "J_4500_4999": {
+                "pool_index": "taka_flowpool_lv19_v2",
+                "sort_field": "heat_4",
+                "sort_field_new": [
+                    {
+                        "heat_4": {
+                            "missing": 0,
+                            "order": "desc"
+                        }
+                    }
+                ],
+                "ignore_filter": [
+                    
+                ]
+            }
+        },
+        "sort_field": "heat_4",
+        "sort_field_new": [
+            {
+                "heat_4": {
+                    "missing": 0,
+                    "order": "desc"
+                }
+            }
+        ],
+        "description": "19级池子",
+        "is_tophot_history": true
+    },
+    {
+        "pool_index": "taka_flowpool_lv20",
+        "attention": "请在debug平台提交修改",
+        "pool_level": [
+            "high"
+        ],
+        "priority": 20,
+        "percentage": 1,
+        "pool_recall_size": 1500,
+        "small_flow": {
+            "J_4500_4999": {
+                "pool_index": "taka_flowpool_lv20_v2",
+                "sort_field": "heat_4",
+                "sort_field_new": [
+                    {
+                        "heat_4": {
+                            "missing": 0,
+                            "order": "desc"
+                        }
+                    }
+                ]
+            }
+        },
+        "sort_field": "heat_4",
+        "sort_field_new": [
+            {
+                "heat_4": {
+                    "missing": 0,
+                    "order": "desc"
+                }
+            }
+        ],
+        "description": "20级池子，forupload",
+        "is_tophot_history": true
+    }
+]

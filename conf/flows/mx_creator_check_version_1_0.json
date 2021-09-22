@@ -1,0 +1,23 @@
+{
+  "range": {
+    "0-9999": "mx_creator_check_version_1_0"
+  },
+  "flow": {
+    "mx_creator_check_version_1_0": {
+      "rankModel": "",
+      "ranker": "",
+      "recall": [
+        "CheckIsCreatorRecall"
+      ],
+      "filter": [],
+      "ruler": [],
+      "mixer": [],
+      "getFeature": [],
+      "scorer": [],
+      "adjuster": [],
+      "cache": [],
+      "cacheForRecall": [],
+      "packer": "Mx_Recommend_Other_Packer"
+    }
+  }
+}

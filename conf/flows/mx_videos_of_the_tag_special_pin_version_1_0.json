@@ -1,0 +1,23 @@
+{
+  "range": {
+    "0-9999": "mx_videos_of_the_tag_special_pin_version_1_0"
+  },
+  "flow": {
+    "mx_videos_of_the_tag_special_pin_version_1_0": {
+      "rankModel": "",
+      "ranker": "",
+      "recall": [
+        "VideosOfTheSpecialPinTagRecall"
+      ],
+      "filter": [],
+      "ruler": [],
+      "mixer": [],
+      "getFeature": [],
+      "scorer": [],
+      "adjuster": [],
+      "cache": [],
+      "cacheForRecall": [],
+      "packer": "Mx_Recommend_Other_Packer"
+    }
+  }
+}

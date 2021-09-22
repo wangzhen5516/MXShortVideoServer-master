@@ -1,0 +1,36 @@
+{
+  "range": {
+    "0-9999": "nearby_people_version_1_0"
+  },
+  "flow": {
+    "nearby_people_version_1_0": {
+      "rankModel": "",
+      "ranker": "",
+      "recall": [
+        "NearByLatitudeAndLongitudeRecall"
+      ],
+      "filter": [
+        "DeleteFilter",
+        "OfflineStatusFilter",
+        "UGCSensitiveContentFilter",
+        "NearbyFilter",
+        "ViewPrivacyFilter",
+        "PrivateAccountFilter",
+        "OriginalFilter",
+        "BlockFilter",
+        "BadDescriptionFilter",
+        "LikeInfoFilter",
+        "IplFilter",
+        "RepeatedResultFilter"
+      ],
+      "ruler": [],
+      "mixer": [],
+      "getFeature": [],
+      "scorer": [],
+      "adjuster": [],
+      "cache": [],
+      "cacheForRecall": [],
+      "packer": "Mx_Recommend_Other_Packer"
+    }
+  }
+}

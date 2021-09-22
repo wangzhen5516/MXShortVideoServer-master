@@ -1,0 +1,36 @@
+{
+    "range": {
+        "0-9999": "fetch_account_status_1_0"
+    },
+    "flow": {
+        "fetch_account_status_1_0": {
+            "rankModel": "",
+            "ranker": "",
+            "recall": [
+                "FetchAccountStatusRecall"
+            ],
+            "filter": [
+                
+            ],
+            "ruler": [
+                
+            ],
+            "mixer": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": ""
+        }
+    }
+}

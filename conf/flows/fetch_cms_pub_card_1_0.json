@@ -1,0 +1,31 @@
+{
+  "range": {
+    "0-9999": "fetch_cms_pub_card_1_0"
+  },
+  "flow": {
+    "fetch_cms_pub_card_1_0": {
+      "rankModel": "",
+      "ranker": "",
+      "recall": [
+        "CMSPubCardRecall"
+      ],
+      "filter": [
+      ],
+      "ruler": [
+      ],
+      "mixer": [
+      ],
+      "getFeature": [
+      ],
+      "scorer": [
+      ],
+      "adjuster": [
+      ],
+      "cache": [
+      ],
+      "cacheForRecall": [
+      ],
+      "packer": "Mx_Recommend_CMS_PUB_Card_Packer"
+    }
+  }
+}

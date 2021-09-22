@@ -1,0 +1,117 @@
+{
+    "range": {
+        "0-999": "real_time_action_version_1_0_A",
+        "1000-9999": "real_time_action_version_1_0_B"
+    },
+    "flow": {
+        "real_time_action_version_1_0_A": {
+            "rankModel": "",
+            "ranker": "",
+            "recall": [
+                "RealTimeActionRecall{result:real_time_action,format:item_reco_cf_03-%s,skip:[NoSkip]}"
+            ],
+            "filter": [
+                "DeleteFilter",
+                "ClientVersionFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageCNFilter",
+                "LanguageHindiFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "ChildTagFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "PoolDuration7Filter",
+                "IplFilter",
+                "RepeatedResultFilter"
+            ],
+            "ruler": [
+                
+            ],
+            "mixer": [
+                "RealTimeActionByPublisherMixer{result:real_time_action,per_pub:2,sim_pub:1,total:8,response_num:1,skip:[NoSkip]}",
+                "RealTimeActionStorageMixer{result:real_time_action_storage,format:%s-similar_video_v10,total:150,count:10,expire:172800,skip:[NoSkip]}"
+            ],
+            "realType": [
+                "like",
+                "share",
+                "down",
+                "played"
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer"
+        },
+        "real_time_action_version_1_0_B": {
+            "rankModel": "",
+            "ranker": "",
+            "recall": [
+                
+            ],
+            "filter": [
+                "DeleteFilter",
+                "ClientVersionFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageCNFilter",
+                "LanguageHindiFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "ChildTagFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "PoolDuration7Filter",
+                "IplFilter",
+                "RepeatedResultFilter"
+            ],
+            "ruler": [
+                
+            ],
+            "mixer": [
+                
+            ],
+            "realType": [
+                "like",
+                "share",
+                "down",
+                "played"
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer"
+        }
+    }
+}

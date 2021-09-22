@@ -1,0 +1,5 @@
+pkgs:
+  - jdk1.8.0_60
+
+build_pkgs:
+  - jdk1.8.0_60

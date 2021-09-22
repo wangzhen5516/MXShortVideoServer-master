@@ -1,0 +1,27 @@
+{
+  "range": {
+    "0-9999": "fetch_banner_version_1_0"
+  },
+  "flow": {
+    "fetch_banner_version_1_0": {
+      "rankModel": "",
+      "ranker": "",
+      "recall": [
+        "BannerRecall"
+      ],
+      "filter": [
+        "SheduleTimeFilter"
+      ],
+      "ruler": [
+      ],
+      "mixer": [],
+      "getFeature": [],
+      "scorer": [],
+      "adjuster": [
+      ],
+      "cache": [],
+      "cacheForRecall": [],
+      "packer": "Mx_Recommend_Banner_Packer"
+    }
+  }
+}

@@ -1,0 +1,104 @@
+[
+  {
+    "statics_name": "feat_stat_1d",
+    "priority": 1,
+    "pre_condition": [
+      "view:>:1000"
+    ],
+    "base_condition": [
+      "share:>:0.0006"
+    ],
+    "small_flow": {
+
+    },
+    "exclude": [
+
+    ],
+    "index_list": ["like", "download", "share", "finish", "play", "finish_10s", "view", "finish_5s"],
+    "description": "1天级别数据"
+  },
+  {
+    "statics_name": "feat_stat_3d",
+    "priority": 2,
+    "pre_condition": [
+      "view:>:1000"
+    ],
+    "base_condition": [
+      "share:>:0.0006"
+    ],
+    "small_flow": {},
+    "exclude": [
+
+    ],
+    "index_list": ["like", "download", "share", "finish", "play", "finish_10s", "view", "finish_5s"],
+    "description": "3天级别数据"
+  },
+  {
+    "statics_name": "feat_stat_7d",
+    "priority": 3,
+    "pre_condition": [
+      "view:>:1000"
+    ],
+    "base_condition": [
+      "share:>:0.0006"
+    ],
+    "small_flow": {
+
+    },
+    "exclude": [
+
+    ],
+    "index_list": ["like", "download", "share", "finish", "play", "finish_10s", "view", "finish_5s"],
+    "description": "7天级别数据"
+  },
+  {
+    "statics_name": "feat_stat_30d",
+    "priority": 4,
+    "pre_condition": [
+      "view:>:1000"
+    ],
+    "base_condition": [
+      "share:>:0.0006"
+    ],
+    "small_flow": {
+
+    },
+    "exclude": [
+
+    ],
+    "index_list": ["like", "download", "share", "finish", "play", "finish_10s", "view", "finish_5s"],
+    "description": "30天级别数据"
+  },
+  {
+    "statics_name": "feat_stat_0d",
+    "priority": 5,
+    "pre_condition": [
+      "view:>:1000"
+    ],
+    "base_condition": [
+      "share:>:0.0006"
+    ],
+    "small_flow": {
+
+    },
+    "exclude": [
+
+    ],
+    "index_list": ["like", "download", "share", "finish", "play", "finish_10s", "view", "finish_5s"],
+    "description": "所有天级别数据"
+  },
+  {
+    "statics_name": "statics_list",
+    "index_number": {
+      "like" : "like_rate",
+      "download" : "download_rate",
+      "share" : "share_rate",
+      "finish" : "finish_rate",
+      "play" : "play_rate",
+      "finish_10s" : "finish_retention_sum_10s",
+      "view" : "view_all",
+      "finish_5s" : "finish_rate_5s_cut"
+    },
+    "description": "数据指标"
+  }
+]

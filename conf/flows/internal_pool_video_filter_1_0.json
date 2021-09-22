@@ -1,0 +1,36 @@
+{
+  "range": {
+    "0-9999": "internal_pool_video_filter_1_0"
+  },
+  "flow": {
+    "internal_pool_video_filter_1_0": {
+      "rankModel": "",
+      "ranker": "",
+      "recall": [
+        "InternalPoolVideoRecall"
+      ],
+      "filter": [
+        "DeleteFilter",
+        "OriginalFilter",
+        "OfflineStatusFilter",
+        "UGCSensitiveContentFilter",
+        "AdVideoFilter",
+        "ViewPrivacyFilter",
+        "CountryFilter",
+        "PrivateAccountFilter",
+        "StatisticsFilter",
+        "ShareRateV3Filter",
+        "BadDescriptionFilter",
+        "LikeInfoFilter"
+      ],
+      "ruler": [],
+      "mixer": [],
+      "getFeature": [],
+      "scorer": [],
+      "adjuster": [],
+      "cache": [],
+      "cacheForRecall": [],
+      "packer": "Mx_Recommend_Internal_Packer"
+    }
+  }
+}

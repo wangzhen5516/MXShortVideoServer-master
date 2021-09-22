@@ -1,0 +1,23 @@
+{
+  "range": {
+    "0-9999": "fetch_follow_card_1_0"
+  },
+  "flow": {
+    "fetch_follow_card_1_0": {
+      "rankModel": "",
+      "ranker": "",
+      "recall": [
+        "FetchKOLFollowCardRecall"
+      ],
+      "filter": [],
+      "ruler": [],
+      "mixer": [],
+      "getFeature": [],
+      "scorer": [],
+      "adjuster": [],
+      "cache": [],
+      "cacheForRecall": [],
+      "packer": "Mx_Recommend_Follow_Card_Packer"
+    }
+  }
+}

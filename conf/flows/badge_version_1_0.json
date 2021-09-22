@@ -1,0 +1,23 @@
+{
+  "range": {
+    "0-9999": "badge_version_1_0"
+  },
+  "flow": {
+    "badge_version_1_0": {
+      "rankModel": "",
+      "ranker": "",
+      "recall": [
+        "PublisherBadgeInfoRecall"
+      ],
+      "filter": [],
+      "ruler": [],
+      "mixer": [],
+      "getFeature": [],
+      "scorer": [],
+      "adjuster": [],
+      "cache": [],
+      "cacheForRecall": [""],
+      "packer": "Mx_Recommend_Badge_Packer"
+    }
+  }
+}

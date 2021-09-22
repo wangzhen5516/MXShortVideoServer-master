@@ -1,0 +1,23 @@
+{
+  "range": {
+    "0-9999": "internal_sorted_video_list_of_publisher_1_0"
+  },
+  "flow": {
+    "internal_sorted_video_list_of_publisher_1_0": {
+      "rankModel": "",
+      "ranker": "",
+      "recall": [
+        "InternalSortedVideoListRecall"
+      ],
+      "filter": [],
+      "ruler": [],
+      "mixer": [],
+      "getFeature": [],
+      "scorer": [],
+      "adjuster": [],
+      "cache": [],
+      "cacheForRecall": [],
+      "packer": "Mx_Recommend_Internal_Packer"
+    }
+  }
+}

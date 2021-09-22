@@ -1,0 +1,55 @@
+{
+    "range": {
+        "0-9999": "follow_suggestions_version_1_0"
+    },
+    "flow": {
+        "follow_suggestions_version_1_0": {
+            "rankModel": "",
+            "ranker": "",
+            "recall": [
+                "FollowSuggestionsRecall"
+            ],
+            "filter": [
+                "DeleteFilter",
+                "ClientVersionFilter",
+                "GuavaBigBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageCNFilter",
+                "LanguageHindiFilter",
+                "LanguageConflictFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "ChildTagFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "RobotVideoFilter",
+                "CountryFilter",
+                "BlockFilter",
+                "IplFilter",
+                "RepeatedResultFilter"
+            ],
+            "ruler": [
+                
+            ],
+            "mixer": [
+                
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer"
+        }
+    }
+}

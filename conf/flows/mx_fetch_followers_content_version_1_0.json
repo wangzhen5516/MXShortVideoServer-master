@@ -1,0 +1,43 @@
+{
+  "range": {
+    "0-9999": "mx_fetch_followers_content_version_1_0"
+  },
+  "flow": {
+    "mx_fetch_followers_content_version_1_0": {
+      "rankModel": "",
+      "ranker": "",
+      "recall": [
+        "FetchLatestFollowersContentNewRecall",
+        "NewFetchFollowersContentUGCRecall",
+        "NewFetchFollowersContentRecall"
+      ],
+      "filter": [
+        "DeleteFilter",
+        "OfflineStatusFilter",
+        "UGCSensitiveContentFilter",
+        "ChildTagFilter",
+        "FetchFollowersContentHistoryFilter",
+        "UserRecommendHistoryFilter",
+        "UserRecommendBloomFilter",
+        "AdVideoFilter",
+        "OriginalFilter",
+        "ViewPrivacyFilter",
+        "BadDescriptionFilter",
+        "LikeInfoFilter",
+        "IplFilter",
+        "RepeatedResultFilter"
+      ],
+      "ruler": [
+        "FollowingBigVRuler"
+      ],
+      "pool": [],
+      "mixer": [],
+      "getFeature": [],
+      "scorer": [],
+      "adjuster": [],
+      "cache": [],
+      "cacheForRecall": [],
+      "packer": "Mx_Recommend_Main_Packer"
+    }
+  }
+}

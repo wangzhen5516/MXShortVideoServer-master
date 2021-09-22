@@ -1,0 +1,12 @@
+{
+    "es_index": "taka_flowpool_boost_lv1",
+    "rate": 0.02,
+    "recall_size": 200,
+    "small_flow": {
+
+    },
+    "sort_field": [
+
+    ],
+    "description": "曝光池"
+}

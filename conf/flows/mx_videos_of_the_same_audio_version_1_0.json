@@ -1,0 +1,41 @@
+{
+  "range": {
+    "0-9999": "mx_videos_of_the_same_audio_version_1_0"
+  },
+  "flow": {
+    "mx_videos_of_the_same_audio_version_1_0": {
+      "rankModel": "",
+      "ranker": "",
+      "recall": [
+        "SameAudioManualTopRecall",
+        "VideosOfTheSameAudioRecall"
+      ],
+      "filter": [
+        "DeleteFilter",
+        "OfflineStatusFilter",
+        "LanguageCNFilter",
+        "LanguageHindiFilter",
+        "UGCSensitiveContentFilter",
+        "PublisherBlockFilter",
+        "ViewPrivacyFilter",
+        "CountryFilter",
+        "PrivateAccountFilter",
+        "BlockFilter",
+        "IplFilter",
+        "OriginalFilter",
+        "RepeatedResultFilter"
+      ],
+      "ruler": [],
+      "pool": [],
+      "mixer": [],
+      "getFeature": [],
+      "scorer": [],
+      "adjuster": [],
+      "cache": [],
+      "cacheForRecall": [
+        "VideosOfSameAudioCache"
+      ],
+      "packer": "Mx_Recommend_Other_Packer"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+    "range": {
+        "0-9999": "mx_followers_bool_refresh_version_1_0"
+    },
+    "flow": {
+        "mx_followers_bool_refresh_version_1_0": {
+            "rankModel": "",
+            "ranker": "",
+            "recall": [
+            ],
+            "filter": [
+                
+            ],
+            "ruler": [
+                
+            ],
+            "pool": [
+                
+            ],
+            "mixer": [
+                
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Other_Packer"
+        }
+    }
+}

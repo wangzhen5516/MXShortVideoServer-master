@@ -1,0 +1,74 @@
+{
+    "range": {
+        "0-9999": "mx_hot_tab_internal_for_main_version_2_0"
+    },
+    "flow": {
+        "mx_hot_tab_internal_for_main_version_2_0": {
+            "rankModel": "",
+            "ranker": "StandardRanker",
+            "recall": [
+                "HighPriorityManualForHotRecall",
+                "PoolRecall",
+                "UserProfileCassandraRecall{result:user_profile_offline,table:personal_reco_act_pub_cf,skip:[NoSkip]}",
+                "UserProfileTagTopRandom1V6PrefixFilterRecall",
+                "StrategyTagPoolRecallWeightedShuffleNumber1",
+                "RealTimeVideoFromRedisRecall",
+                "NewLanguageRecall"
+            ],
+            "fallback": "RandomFallback",
+            "filter": [
+                "DeleteFilter",
+                "StandardFilter{skip:[InvalidClientVersionSkip],pass:[InvalidClientVersionCheck],test:ClientVersionFilterCheck}",
+                "OriginalFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageHindiFilter",
+                "LanguageMLTagsFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "BlockFilter",
+                "StatisticsFilter",
+                "StatisticsDataFilter",
+                "StatisticsDataFilter2",
+                "BadDescriptionFilter",
+                "StandardFilter{skip:[NoSkip],pass:[NoCheck],test:BadLikeInfoStatusCheck}",
+                "IplFilter",
+                "RepeatedResultFilter"
+            ],
+            "ruler": [
+                
+            ],
+            "mixer": [
+                "NewLanguageMixer",
+                "SimilarRealMixer1",
+                "ListMixer{result:user_profile_offline,count:0.04,type:random,skip:[NewUserSkip]}",
+                "UserProfileTagTopMixer",
+                "HighStrategyPoolMixer"
+            ],
+            "guaranteeMixer": [
+                "UgcHighLevelMixer"
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                "UserFeedResultCache"
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer"
+        }
+    }
+}

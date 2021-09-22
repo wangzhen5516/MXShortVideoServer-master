@@ -1,0 +1,35 @@
+{
+  "range": {
+    "0-9999": "mx_videos_of_the_publisher_version_1_0"
+  },
+  "flow": {
+    "mx_videos_of_the_publisher_version_1_0": {
+      "rankModel": "",
+      "ranker": "",
+      "recall": [
+        "VideosOfThePublisherNewRecall",
+        "VideosOfThePublisherCrawlerRecall"
+      ],
+      "filter": [
+        "DeleteFilter",
+        "OfflineStatusFilter",
+        "UGCSensitiveContentFilter",
+        "ViewPrivacyFilter",
+        "NotRequestPublisherFilter"
+      ],
+      "ruler": [
+        "GetPoolIndexForDebugRuler"
+      ],
+      "pool": [],
+      "mixer": [],
+      "getFeature": [],
+      "scorer": [],
+      "adjuster": [],
+      "cache": [],
+      "cacheForRecall": [
+        "VideosOfPublisherCache"
+      ],
+      "packer": "Mx_Recommend_Other_Packer"
+    }
+  }
+}

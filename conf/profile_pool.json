@@ -1,0 +1,12 @@
+{
+    "es_index": "taka_flowpool_special_tag_target_v1",
+    "rate": 0.02,
+    "recall_size": 200,
+    "small_flow": {
+
+    },
+    "sort_field": [
+
+    ],
+    "description": "个性化 boost 池"
+}

@@ -1,0 +1,24 @@
+{
+  "range": {
+    "0-9999": "mx_music_track_card_content_version_1_0"
+  },
+  "flow": {
+    "mx_music_track_card_content_version_1_0": {
+      "rankModel": "",
+      "ranker": "",
+      "recall": [
+        "MusicCardTrackRecall{skip:[InvalidResourceIdSkip],result:default,size:100}"
+      ],
+      "filter": [],
+      "ruler": [
+        "LessIsNoneRuler{skip:[NoSkip],min:4}"
+      ],
+      "mixer": [],
+      "scorer": [],
+      "adjuster": [],
+      "cache": ["MusicResultCache"],
+      "cacheForRecall": [],
+      "packer": "Mx_Recommend_Other_Packer"
+    }
+  }
+}

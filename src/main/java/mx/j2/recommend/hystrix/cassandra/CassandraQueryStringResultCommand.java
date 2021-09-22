@@ -1,0 +1,48 @@
+package mx.j2.recommend.hystrix.cassandra;
+
+import com.datastax.oss.driver.api.core.CqlSession;
+import com.datastax.oss.driver.api.core.cql.ResultSet;
+import com.datastax.oss.driver.api.core.cql.Row;
+import com.netflix.hystrix.HystrixCommand;
+import mx.j2.recommend.util.HystrixUtil;
+
+import java.util.Iterator;
+
+/**
+ * 从通用 CA 中读取某行某列的字符串值
+ */
+public class CassandraQueryStringResultCommand extends HystrixCommand<String> {
+
+    private String query;
+    private String columnName;
+    private CqlSession session;
+
+    private CassandraQueryStringResultCommand() {
+        super(HystrixUtil.cassandraSetter);
+    }
+
+    public CassandraQueryStringResultCommand(CqlSession session, String query, String columnName) {
+        this();
+        this.session = session;
+        this.query = query;
+        this.columnName = columnName;
+    }
+
+    @Override
+    protected String run() throws Exception {
+        ResultSet rs = session.execute(query);
+        Iterator<Row> rsIterator = rs.iterator();
+
+        if (rsIterator.hasNext()) {
+            Row row = rsIterator.next();
+            return row.getString(columnName);
+        }
+        return null;
+    }
+
+    @Override
+    protected String getFallback() {
+        HystrixUtil.logFallback(this);
+        return "";
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "range": {
+        "0-9999": "internal_videos_of_the_tag_version_1_0"
+    },
+    "flow": {
+        "internal_videos_of_the_tag_version_1_0": {
+            "rankModel": "",
+            "recall": [
+                "InternalVideosOfTagRecall"
+            ],
+            "filter": [
+                "UgcWaterMarkFilter"
+            ],
+            "ruler": [
+
+            ],
+            "mixer": [
+
+            ],
+            "getFeature": [
+
+            ],
+            "scorer": [
+
+            ],
+            "adjuster": [
+
+            ],
+            "cache": [
+
+            ],
+            "cacheForRecall": [
+
+            ],
+            "packer": "Mx_Recommend_Internal_Packer"
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+  "range": {
+    "0-9999": "mx_live_card_version_1_0"
+  },
+  "flow": {
+    "mx_live_card_version_1_0": {
+      "rankModel": "",
+      "ranker": "LiveStreamRanker",
+      "recall": [
+        "WhiteListLiveStreamRecall",
+        "GeneralLiveStreamRecall"
+      ],
+      "filter": [
+        "BlockFilter",
+        "LiveGeneralFilter{ratio:0}"
+      ],
+      "ruler": [
+        "LivePageResultRuler"
+      ],
+      "pool": [],
+      "mixer": [],
+      "getFeature": [],
+      "scorer": [
+        "LiveManualScore"
+      ],
+      "adjuster": [],
+      "cache": [
+      ],
+      "cacheForRecall": [
+        "LiveDocListCache"
+      ],
+      "packer": "Mx_Recommend_Live_Packer"
+    }
+  }
+}

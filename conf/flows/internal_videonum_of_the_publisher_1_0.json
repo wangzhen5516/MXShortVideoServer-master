@@ -1,0 +1,22 @@
+{
+  "range": {
+    "0-9999": "internal_videonum_of_the_publisher_1_0"
+  }, 
+  "flow": {
+    "internal_videonum_of_the_publisher_1_0": {
+      "rankModel": "", 
+      "getFeature": [], 
+      "ranker": "", 
+      "packer": "", 
+      "recall": [], 
+      "cache": [], 
+      "mixer": [], 
+      "filter": [], 
+      "adjuster": [], 
+      "scorer": [], 
+      "ruler": [], 
+      "cacheForRecall": [], 
+      "fallback": ""
+    }
+  }
+}

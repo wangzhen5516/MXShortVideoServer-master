@@ -1,0 +1,59 @@
+{
+    "range": {
+        "0-9999": "mx_status_tab_internal_version_1_0"
+    },
+    "flow": {
+        "mx_status_tab_internal_version_1_0": {
+            "rankModel": "",
+            "ranker": "StandardRanker",
+            "recall": [
+                "HighPriorityManualForStatusRecall"
+            ],
+            "fallback": "RandomFallback",
+            "filter": [
+                "DeleteFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageCNFilter",
+                "LanguageHindiFilter",
+                "WidthAndHeightFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "ChildTagFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "BlockFilter",
+                "OriginalFilter",
+                "IplFilter",
+                "RepeatedResultFilter"
+            ],
+            "ruler": [
+                
+            ],
+            "pool": [
+                
+            ],
+            "mixer": [
+                
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                "AppNameShuffleAdjuster"
+            ],
+            "cache": [
+                
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer"
+        }
+    }
+}

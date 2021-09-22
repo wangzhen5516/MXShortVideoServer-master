@@ -1,0 +1,1714 @@
+{
+    "range": {
+        "0-499": "A_0_499",
+        "500-999": "B_500_999",
+        "1000-1499": "C_1000_1499",
+        "1500-1999": "D_1500_1999",
+        "2000-2499": "E_2000_2499",
+        "2500-2999": "F_2500_2999",
+        "3000-3499": "G_3000_3499",
+        "3500-3999": "H_3500_3999",
+        "4000-4499": "I_4000_4499",
+        "4500-4999": "J_4500_4999",
+        "5000-5499": "K_5000_5499",
+        "5500-5999": "L_5500_5999",
+        "6000-6499": "M_6000_6499",
+        "6500-6999": "N_6500_6999",
+        "7000-7499": "O_7000_7499",
+        "7500-7999": "P_7500_7999",
+        "8000-8499": "Q_8000_8499",
+        "8500-8999": "R_8500_8999",
+        "9000-9499": "S_9000_9499",
+        "9500-9999": "T_9500_9999"
+    },
+    "flow": {
+        "A_0_499": {
+            "rankModel": "",
+            "ranker": "StandardRanker",
+            "prepare": [
+                "TagPrepare{name:tag_short_lin_v1,skip:[NoSkip],table:up_ml_tag_60d_v1,column:tag_profile,match:PTagMatch}",
+                "TagPrepare{name:cate_short_lin_v1,skip:[NoSkip],table:up_category_30d_v1,column:tag_profile,match:CategoryMatch}"
+            ],
+            "recall": [
+                "PoolRecall",
+                "UserProfileCassandraRecall{result:user_profile_din,table:personal_reco_din,skip:[NoSkip]}",
+                "NewLanguageConfigurableRecall{result:new_language}",
+                "ManualTopRecall1",
+                "ExposurePoolRecall{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolRecall{result:profile_pool,skip:[NoSkip]}",
+                "SpecialUserProfileTagRedisRecall{result:pubg,tag:pubg,redis_key:tophot_ml_tag_v6_pubg}"
+            ],
+            "fallback": "RandomFallback",
+            "filter": [
+                "DeleteFilter",
+                "StandardFilter{skip:[InvalidClientVersionSkip],pass:[InvalidClientVersionCheck],test:ClientVersionFilterCheck}",
+                "OriginalFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageHindiFilter",
+                "LanguageMLTagsFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "BlockFilter",
+                "BadDescriptionFilter",
+                "StandardFilter{skip:[NoSkip],pass:[NoCheck],test:BadLikeInfoStatusCheck}",
+                "StatisticsDataNewFilter",
+                "IplFilter",
+                "RepeatedResultFilter",
+                "ProfileTagHindiFilter"
+            ],
+            "ruler": [
+                "AdvanceInterestTagRuler",
+                "PoolVideoMoveForwardRuler{poolPriority:[14]}"
+            ],
+            "mixer": [
+                "ExposurePoolMixer{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolMixer{result:profile_pool,skip:[NoSkip],p_tag:tag_short_lin_v1,category:cate_short_lin_v1}",
+                "UgcLowLevelMixerRatioVersion"
+            ],
+            "guaranteeMixer": [
+                "UgcHighLevelMixer"
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                "UserFeedResultCache"
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer",
+            "test_record": [
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "下掉全部个性化路"
+                }
+            ]
+        },
+        "B_500_999": {
+            "rankModel": "",
+            "ranker": "StandardRanker",
+            "prepare": [
+                "TagPrepare{name:tag_short_lin_v1,skip:[NoSkip],table:up_ml_tag_60d_v1,column:tag_profile,match:PTagMatch}",
+                "TagPrepare{name:cate_short_lin_v1,skip:[NoSkip],table:up_category_30d_v1,column:tag_profile,match:CategoryMatch}"
+            ],
+            "recall": [
+                "PoolRecall",
+                "UserProfileCassandraRecall{result:user_profile_din,table:personal_reco_din,skip:[NoSkip]}",
+                "TrendingRealtimeV10WeightedByTime",
+                "NewLanguageConfigurableRecall{result:new_language}",
+                "ManualTopRecall1",
+                "InterestTagRecall",
+                "ExposurePoolRecall{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolRecall{result:profile_pool,skip:[NoSkip]}",
+                "SpecialUserProfileTagRedisRecall{result:pubg,tag:pubg,redis_key:tophot_ml_tag_v6_pubg}"
+            ],
+            "fallback": "RandomFallback",
+            "filter": [
+                "DeleteFilter",
+                "StandardFilter{skip:[InvalidClientVersionSkip],pass:[InvalidClientVersionCheck],test:ClientVersionFilterCheck}",
+                "OriginalFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageHindiFilter",
+                "LanguageMLTagsFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "BlockFilter",
+                "BadDescriptionFilter",
+                "StandardFilter{skip:[NoSkip],pass:[NoCheck],test:BadLikeInfoStatusCheck}",
+                "StatisticsDataNewFilter",
+                "IplFilter",
+                "RepeatedResultFilter",
+                "ProfileTagHindiFilter"
+            ],
+            "ruler": [
+                "AdvanceInterestTagRuler",
+                "PoolVideoMoveForwardRuler{poolPriority:[14]}"
+            ],
+            "mixer": [
+                "ExposurePoolMixer{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolMixer{result:profile_pool,skip:[NoSkip],p_tag:tag_short_lin_v1,category:cate_short_lin_v1}",
+                "UgcLowLevelMixerRatioVersion",
+                "SimilarRealMixer6RatioVersion"
+            ],
+            "guaranteeMixer": [
+                "UgcHighLevelMixer"
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                "UserFeedResultCache"
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer",
+            "test_record": [
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "下掉全部个性化路"
+                },
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-07-2416:52",
+                    "description": "下线个性化召回UserProfileTagRedisRecall实验"
+                }
+            ]
+        },
+        "C_1000_1499": {
+            "rankModel": "",
+            "ranker": "StandardRanker",
+            "prepare": [
+                "TagPrepare{name:tag_short_lin_v1,skip:[NoSkip],table:up_ml_tag_60d_v1,column:tag_profile,match:PTagMatch}",
+                "TagPrepare{name:cate_short_lin_v1,skip:[NoSkip],table:up_category_30d_v1,column:tag_profile,match:CategoryMatch}"
+            ],
+            "recall": [
+                "PoolRecall",
+                "UserProfileCassandraRecall{result:user_profile_din,table:personal_reco_din,skip:[NoSkip]}",
+                "TrendingRealtimeV10WeightedByTime",
+                "NewLanguageConfigurableRecall{result:new_language}",
+                "ManualTopRecall1",
+                "InterestTagRecall",
+                "ExposurePoolRecall{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolRecall{result:profile_pool,skip:[NoSkip]}",
+                "CreatorKOLRecall{result:creator_kol,es_index:taka_flowpool_vip_lv2,size:500,cache:true,sort:[heat-desc],skip:[NoSkip]}",
+                "SpecialUserProfileTagRedisRecall{result:pubg,tag:pubg,redis_key:tophot_ml_tag_v6_pubg}"
+            ],
+            "fallback": "RandomFallback",
+            "filter": [
+                "DeleteFilter",
+                "StandardFilter{skip:[InvalidClientVersionSkip],pass:[InvalidClientVersionCheck],test:ClientVersionFilterCheck}",
+                "OriginalFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageHindiFilter",
+                "LanguageMLTagsFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "BlockFilter",
+                "BadDescriptionFilter",
+                "StandardFilter{skip:[NoSkip],pass:[NoCheck],test:BadLikeInfoStatusCheck}",
+                "StatisticsDataNewFilter",
+                "IplFilter",
+                "RepeatedResultFilter",
+                "ProfileTagHindiFilter"
+            ],
+            "ruler": [
+                "AdvanceInterestTagRuler",
+                "PoolVideoMoveForwardRuler{poolPriority:[14]}"
+            ],
+            "mixer": [
+                "ExposurePoolMixer{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolMixer{result:profile_pool,skip:[NoSkip],p_tag:tag_short_lin_v1,category:cate_short_lin_v1}",
+                "ListMixer{result:creator_kol,count:0.15,type:in_order,skip:[NoSkip]}",
+                "UgcLowLevelMixerRatioVersion"
+            ],
+            "guaranteeMixer": [
+                "UgcHighLevelMixer"
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                "UserFeedResultCache"
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer",
+            "test_record": [
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "下掉全部个性化路"
+                },
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-07-3112:37",
+                    "description": "为创作者召回大V数据"
+                }
+            ]
+        },
+        "D_1500_1999": {
+            "rankModel": "",
+            "ranker": "StandardRanker",
+            "prepare": [
+                "TagPrepare{name:tag_short_lin_v1,skip:[NoSkip],table:up_ml_tag_60d_v1,column:tag_profile,match:PTagMatch}",
+                "TagPrepare{name:cate_short_lin_v1,skip:[NoSkip],table:up_category_30d_v1,column:tag_profile,match:CategoryMatch}"
+            ],
+            "recall": [
+                "PoolRecall",
+                "UserProfileCassandraRecall{result:user_profile_din,table:personal_reco_din,skip:[NoSkip]}",
+                "TrendingRealtimeV10WeightedByTime",
+                "NewLanguageConfigurableRecall{result:new_language}",
+                "ManualTopRecall1",
+                "InterestTagRecall",
+                "ExposurePoolRecall{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolRecall{result:profile_pool,skip:[NoSkip]}",
+                "SpecialUserProfileTagRedisRecall{result:pubg,tag:pubg,redis_key:tophot_ml_tag_v6_pubg}"
+            ],
+            "fallback": "RandomFallback",
+            "filter": [
+                "DeleteFilter",
+                "StandardFilter{skip:[InvalidClientVersionSkip],pass:[InvalidClientVersionCheck],test:ClientVersionFilterCheck}",
+                "OriginalFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageHindiFilter",
+                "LanguageMLTagsFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "BlockFilter",
+                "BadDescriptionFilter",
+                "StandardFilter{skip:[NoSkip],pass:[NoCheck],test:BadLikeInfoStatusCheck}",
+                "StatisticsDataNewFilter",
+                "IplFilter",
+                "RepeatedResultFilter",
+                "ProfileTagHindiFilter"
+            ],
+            "ruler": [
+                "AdvanceInterestTagRuler",
+                "PoolVideoMoveForwardRuler{poolPriority:[14]}"
+            ],
+            "mixer": [
+                "ExposurePoolMixer{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolMixer{result:profile_pool,skip:[NoSkip],p_tag:tag_short_lin_v1,category:cate_short_lin_v1}",
+                "UgcLowLevelMixerRatioVersion"
+            ],
+            "guaranteeMixer": [
+                "UgcHighLevelMixer"
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                "UserFeedResultCache"
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer",
+            "test_record": [
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "下掉全部个性化路"
+                }
+            ]
+        },
+        "E_2000_2499": {
+            "rankModel": "",
+            "ranker": "StandardRanker",
+            "prepare": [
+                "TagPrepare{name:tag_short_lin_v1,skip:[NoSkip],table:up_ml_tag_60d_v1,column:tag_profile,match:PTagMatch}",
+                "TagPrepare{name:cate_short_lin_v1,skip:[NoSkip],table:up_category_30d_v1,column:tag_profile,match:CategoryMatch}"
+            ],
+            "recall": [
+                "PoolRecall",
+                "UserProfileCassandraRecall{result:user_profile_din,table:personal_reco_din,skip:[NoSkip]}",
+                "TrendingRealtimeV10WeightedByTime",
+                "NewLanguageConfigurableRecall{result:new_language}",
+                "ManualTopRecall1",
+                "InterestTagRecall",
+                "ExposurePoolRecall{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolRecall{result:profile_pool,skip:[NoSkip]}",
+                "SpecialUserProfileTagRedisRecall{result:pubg,tag:pubg,redis_key:tophot_ml_tag_v6_pubg}",
+                "UserProfileTagESRecall{result:user_profile_tag_es,table:up_publisher_like_30d_v1,num:1,skip:[NoSkip]}"
+            ],
+            "fallback": "RandomFallback",
+            "filter": [
+                "DeleteFilter",
+                "StandardFilter{skip:[InvalidClientVersionSkip],pass:[InvalidClientVersionCheck],test:ClientVersionFilterCheck}",
+                "OriginalFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageHindiFilter",
+                "LanguageMLTagsFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "BlockFilter",
+                "BadDescriptionFilter",
+                "StandardFilter{skip:[NoSkip],pass:[NoCheck],test:BadLikeInfoStatusCheck}",
+                "IplFilter",
+                "RepeatedResultFilter",
+                "ProfileTagHindiFilter"
+            ],
+            "ruler": [
+                "AdvanceInterestTagRuler",
+                "PoolVideoMoveForwardRuler{poolPriority:[14]}"
+            ],
+            "mixer": [
+                "UgcLowLevelMixerRatioVersion",
+                "ListMixer{result:new_language,count:0.00067,type:in_order,skip:[NoSkip]}",
+                "SimilarRealMixer6RatioVersion",
+                "ListMixer{result:user_profile_din,count:0.15,type:in_order,skip:[NoSkip]}",
+                "InterestTagMixer",
+                "ExposurePoolMixer{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolMixer{result:profile_pool,skip:[NoSkip],p_tag:tag_short_lin_v1,category:cate_short_lin_v1}",
+                "ListMixer{result:pubg,count:0.034,type:in_order,skip:[NoSkip]}",
+                "MultiListMixer{result:user_profile_tag_es,count:0.033,type:in_order,skip:[NoSkip]}"
+            ],
+            "guaranteeMixer": [
+                "UgcHighLevelMixer"
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                "UserFeedResultCache"
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer",
+            "test_record": [
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "暂无"
+                }
+            ]
+        },
+        "F_2500_2999": {
+            "rankModel": "",
+            "ranker": "StandardRanker",
+            "prepare": [
+                "TagPrepare{name:tag_short_lin_v1,skip:[NoSkip],table:up_ml_tag_60d_v1,column:tag_profile,match:PTagMatch}",
+                "TagPrepare{name:cate_short_lin_v1,skip:[NoSkip],table:up_category_30d_v1,column:tag_profile,match:CategoryMatch}"
+            ],
+            "recall": [
+                "PoolRecall",
+                "UserProfileCassandraRecall{result:user_profile_din,table:personal_reco_din,skip:[NoSkip]}",
+                "TrendingRealtimeV10WeightedByTime",
+                "NewLanguageConfigurableRecall{result:new_language}",
+                "ManualTopRecall1",
+                "InterestTagRecall",
+                "ExposurePoolRecall{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolRecall{result:profile_pool,skip:[NoSkip]}",
+                "SpecialUserProfileTagRedisRecall{result:pubg,tag:pubg,redis_key:tophot_ml_tag_v6_pubg}",
+                "UserProfileTagRedisRecall{result:user_profile_tag_redis,table:up_primary_tag_30d_v1,num:2,redis_key:tophot_ml_tag_v7_,skip:[NoSkip]}"
+            ],
+            "fallback": "RandomFallback",
+            "filter": [
+                "DeleteFilter",
+                "StandardFilter{skip:[InvalidClientVersionSkip],pass:[InvalidClientVersionCheck],test:ClientVersionFilterCheck}",
+                "OriginalFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageHindiFilter",
+                "LanguageMLTagsFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "BlockFilter",
+                "BadDescriptionFilter",
+                "StandardFilter{skip:[NoSkip],pass:[NoCheck],test:BadLikeInfoStatusCheck}",
+                "StatisticsDataNewFilter",
+                "IplFilter",
+                "RepeatedResultFilter",
+                "ProfileTagHindiFilter"
+            ],
+            "ruler": [
+                "AdvanceInterestTagRuler",
+                "PoolVideoMoveForwardRuler{poolPriority:[14]}"
+            ],
+            "mixer": [
+                "UgcLowLevelMixerRatioVersion",
+                "ListMixer{result:new_language,count:0.00067,type:in_order,skip:[NoSkip]}",
+                "SimilarRealMixer6RatioVersion",
+                "ListMixer{result:user_profile_din,count:0.15,type:in_order,skip:[NoSkip]}",
+                "InterestTagMixer",
+                "ExposurePoolMixer{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolMixer{result:profile_pool,skip:[NoSkip],p_tag:tag_short_lin_v1,category:cate_short_lin_v1}",
+                "ListMixer{result:pubg,count:0.034,type:in_order,skip:[NoSkip]}",
+                "MultiListMixer{result:user_profile_tag_redis,count:0.066,type:in_order,skip:[NoSkip]}"
+            ],
+            "guaranteeMixer": [
+                "UgcHighLevelMixer"
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                "UserFeedResultCache"
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer",
+            "test_record": [
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "去掉1-4级池子(只v1)"
+                },
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "14级v2实验"
+                }
+            ]
+        },
+        "G_3000_3499": {
+            "rankModel": "",
+            "ranker": "StandardRanker",
+            "prepare": [
+                "TagPrepare{name:tag_short_lin_v1,skip:[NoSkip],table:up_ml_tag_60d_v1,column:tag_profile,match:PTagMatch}",
+                "TagPrepare{name:cate_short_lin_v1,skip:[NoSkip],table:up_category_30d_v1,column:tag_profile,match:CategoryMatch}"
+            ],
+            "recall": [
+                "PoolRecall",
+                "UserProfileCassandraRecall{result:user_profile_din,table:personal_reco_din,skip:[NoSkip]}",
+                "UserProfileCassandraRecall{result:user_profile_din_researcher,table:personal_reco_din_researcher,skip:[NoSkip]}",
+                "TrendingRealtimeV10WeightedByTime",
+                "NewLanguageConfigurableRecall{result:new_language}",
+                "ManualTopRecall1",
+                "InterestTagRecall",
+                "SpecialUserProfileTagRedisRecall{result:pubg,tag:pubg,redis_key:tophot_ml_tag_v6_pubg}",
+                "ExposurePoolRecall{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolRecall{result:profile_pool,skip:[NoSkip]}"
+            ],
+            "fallback": "RandomFallback",
+            "filter": [
+                "DeleteFilter",
+                "StandardFilter{skip:[InvalidClientVersionSkip],pass:[InvalidClientVersionCheck],test:ClientVersionFilterCheck}",
+                "OriginalFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageHindiFilter",
+                "LanguageMLTagsFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "BlockFilter",
+                "BadDescriptionFilter",
+                "StandardFilter{skip:[NoSkip],pass:[NoCheck],test:BadLikeInfoStatusCheck}",
+                "StatisticsDataNewFilter",
+                "IplFilter",
+                "RepeatedResultFilter",
+                "ProfileTagHindiFilter"
+            ],
+            "ruler": [
+                "AdvanceInterestTagRuler",
+                "PoolVideoMoveForwardRuler{poolPriority:[14]}"
+            ],
+            "mixer": [
+                "UgcLowLevelMixerRatioVersion",
+                "ListMixer{result:new_language,count:0.00067,type:in_order,skip:[NoSkip]}",
+                "SimilarRealMixer6RatioVersion",
+                "ListMixer{result:user_profile_din,count:0.15,type:in_order,skip:[NoSkip]}",
+                "ListMixer{result:user_profile_din_researcher,count:0.34,type:in_order,skip:[NoSkip]}",
+                "InterestTagMixer",
+                "ListMixer{result:pubg,count:0.034,type:in_order,skip:[NoSkip]}",
+                "ExposurePoolMixer{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolMixer{result:profile_pool,skip:[NoSkip],p_tag:tag_short_lin_v1,category:cate_short_lin_v1}"
+            ],
+            "guaranteeMixer": [
+                "UgcHighLevelMixer"
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                "UserFeedResultCache"
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer",
+            "test_record": [
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "14级v4实验"
+                }
+            ]
+        },
+        "H_3500_3999": {
+            "rankModel": "",
+            "ranker": "StandardRanker",
+            "prepare": [
+                "TagPrepare{name:tag_short_lin_v1,skip:[NoSkip],table:up_ml_tag_60d_v1,column:tag_profile,match:PTagMatch}",
+                "TagPrepare{name:cate_short_lin_v1,skip:[NoSkip],table:up_category_30d_v1,column:tag_profile,match:CategoryMatch}"
+            ],
+            "recall": [
+                "PoolRecall",
+                "UserProfileCassandraRecall{result:user_profile_din,table:personal_reco_din,skip:[NoSkip]}",
+                "TrendingRealtimeV10WeightedByTime",
+                "NewLanguageConfigurableRecall{result:new_language}",
+                "ManualTopRecall1",
+                "InterestTagRecall",
+                "ExposurePoolRecall{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolRecall{result:profile_pool,skip:[NoSkip]}",
+                "SpecialUserProfileTagRedisRecall{result:pubg,tag:pubg,redis_key:tophot_ml_tag_v6_pubg}"
+            ],
+            "fallback": "RandomFallback",
+            "filter": [
+                "DeleteFilter",
+                "StandardFilter{skip:[InvalidClientVersionSkip],pass:[InvalidClientVersionCheck],test:ClientVersionFilterCheck}",
+                "OriginalFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageHindiFilter",
+                "LanguageMLTagsFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "BlockFilter",
+                "BadDescriptionFilter",
+                "StandardFilter{skip:[NoSkip],pass:[NoCheck],test:BadLikeInfoStatusCheck}",
+                "StatisticsDataNewFilter",
+                "IplFilter",
+                "RepeatedResultFilter",
+                "ProfileTagHindiFilter"
+            ],
+            "ruler": [
+                "AdvanceInterestTagRuler",
+                "PoolVideoMoveForwardRuler{poolPriority:[14]}"
+            ],
+            "mixer": [
+                "ExposurePoolMixer{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolMixer{result:profile_pool,skip:[NoSkip],p_tag:tag_short_lin_v1,category:cate_short_lin_v1}",
+                "UgcLowLevelMixerRatioVersion"
+            ],
+            "guaranteeMixer": [
+                "UgcHighLevelMixer"
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                "UserFeedResultCache"
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer",
+            "test_record": [
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "下掉全部个性化路"
+                }
+            ]
+        },
+        "I_4000_4499": {
+            "rankModel": "",
+            "ranker": "StandardRanker",
+            "prepare": [
+                "TagPrepare{name:tag_short_lin_v1,skip:[NoSkip],table:up_ml_tag_60d_v1,column:tag_profile,match:PTagMatch}",
+                "TagPrepare{name:cate_short_lin_v1,skip:[NoSkip],table:up_category_30d_v1,column:tag_profile,match:CategoryMatch}"
+            ],
+            "recall": [
+                "PoolRecall",
+                "UserProfileCassandraRecall{result:user_profile_din,table:personal_reco_din,skip:[NoSkip]}",
+                "TrendingRealtimeV10WeightedByTime",
+                "NewLanguageConfigurableRecall{result:new_language}",
+                "ManualTopRecall1",
+                "InterestTagRecall",
+                "ExposurePoolRecall{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolRecall{result:profile_pool,skip:[NoSkip]}",
+                "SpecialUserProfileTagRedisRecall{result:pubg,tag:pubg,redis_key:tophot_ml_tag_v6_pubg}"
+            ],
+            "fallback": "RandomFallback",
+            "filter": [
+                "DeleteFilter",
+                "StandardFilter{skip:[InvalidClientVersionSkip],pass:[InvalidClientVersionCheck],test:ClientVersionFilterCheck}",
+                "OriginalFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageHindiFilter",
+                "LanguageMLTagsFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "BlockFilter",
+                "BadDescriptionFilter",
+                "StandardFilter{skip:[NoSkip],pass:[NoCheck],test:BadLikeInfoStatusCheck}",
+                "StatisticsDataNewFilter",
+                "IplFilter",
+                "RepeatedResultFilter",
+                "ProfileTagHindiFilter"
+            ],
+            "ruler": [
+                "AdvanceInterestTagRuler",
+                "PoolVideoMoveForwardRuler{poolPriority:[14]}"
+            ],
+            "mixer": [
+                "ExposurePoolMixer{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolMixer{result:profile_pool,skip:[NoSkip],p_tag:tag_short_lin_v1,category:cate_short_lin_v1}",
+                "UgcLowLevelMixerRatioVersion"
+            ],
+            "guaranteeMixer": [
+                "UgcHighLevelMixer"
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                "UserFeedResultCache"
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer",
+            "test_record": [
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "下掉全部个性化路"
+                }
+            ]
+        },
+        "J_4500_4999": {
+            "rankModel": "",
+            "ranker": "StandardRanker",
+            "prepare": [
+                "TagPrepare{name:tag_short_lin_v1,skip:[NoSkip],table:up_ml_tag_60d_v1,column:tag_profile,match:PTagMatch}",
+                "TagPrepare{name:cate_short_lin_v1,skip:[NoSkip],table:up_category_30d_v1,column:tag_profile,match:CategoryMatch}"
+            ],
+            "recall": [
+                "PoolRecall",
+                "UserProfileCassandraRecall{result:user_profile_din,table:personal_reco_din,skip:[NoSkip]}",
+                "TrendingRealtimeV10WeightedByTime",
+                "NewLanguageConfigurableRecall{result:new_language}",
+                "ManualTopRecall1",
+                "InterestTagRecall",
+                "ExposurePoolRecall{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolRecall{result:profile_pool,skip:[NoSkip]}",
+                "SpecialUserProfileTagRedisRecall{result:pubg,tag:pubg,redis_key:tophot_ml_tag_v6_pubg}"
+            ],
+            "fallback": "RandomFallback",
+            "filter": [
+                "DeleteFilter",
+                "StandardFilter{skip:[InvalidClientVersionSkip],pass:[InvalidClientVersionCheck],test:ClientVersionFilterCheck}",
+                "OriginalFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageHindiFilter",
+                "LanguageMLTagsFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "BlockFilter",
+                "BadDescriptionFilter",
+                "StandardFilter{skip:[NoSkip],pass:[NoCheck],test:BadLikeInfoStatusCheck}",
+                "StatisticsDataNewFilter",
+                "IplFilter",
+                "RepeatedResultFilter",
+                "ProfileTagHindiFilter"
+            ],
+            "ruler": [
+                "AdvanceInterestTagRuler",
+                "PoolVideoMoveForwardRuler{poolPriority:[14]}"
+            ],
+            "mixer": [
+                "UgcLowLevelMixerRatioVersion",
+                "ListMixer{result:new_language,count:0.00067,type:in_order,skip:[NoSkip]}",
+                "SimilarRealMixer6RatioVersion",
+                "ListMixer{result:user_profile_din,count:0.15,type:in_order,skip:[NoSkip]}",
+                "InterestTagMixer",
+                "ExposurePoolMixer{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolMixer{result:profile_pool,skip:[NoSkip],p_tag:tag_short_lin_v1,category:cate_short_lin_v1}",
+                "ListMixer{result:pubg,count:0.034,type:in_order,skip:[NoSkip]}"
+            ],
+            "guaranteeMixer": [
+                "UgcHighLevelMixer"
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                "UserFeedResultCache"
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer",
+            "test_record": [
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "暂无"
+                }
+            ]
+        },
+        "K_5000_5499": {
+            "rankModel": "",
+            "ranker": "StandardRanker",
+            "prepare": [
+                "TagPrepare{name:tag_short_lin_v1,skip:[NoSkip],table:up_ml_tag_60d_v1,column:tag_profile,match:PTagMatch}",
+                "TagPrepare{name:cate_short_lin_v1,skip:[NoSkip],table:up_category_30d_v1,column:tag_profile,match:CategoryMatch}"
+            ],
+            "recall": [
+                "PoolRecall",
+                "UserProfileCassandraRecall{result:user_profile_din,table:personal_reco_din,skip:[NoSkip]}",
+                "TrendingRealtimeV10WeightedByTime",
+                "NewLanguageConfigurableRecall{result:new_language}",
+                "ManualTopRecall1",
+                "InterestTagRecall",
+                "ExposurePoolRecall{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolRecall{result:profile_pool,skip:[NoSkip]}",
+                "SpecialUserProfileTagRedisRecall{result:pubg,tag:pubg,redis_key:tophot_ml_tag_v6_pubg}"
+            ],
+            "fallback": "RandomFallback",
+            "filter": [
+                "DeleteFilter",
+                "StandardFilter{skip:[InvalidClientVersionSkip],pass:[InvalidClientVersionCheck],test:ClientVersionFilterCheck}",
+                "OriginalFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageHindiFilter",
+                "LanguageMLTagsFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "BlockFilter",
+                "BadDescriptionFilter",
+                "StandardFilter{skip:[NoSkip],pass:[NoCheck],test:BadLikeInfoStatusCheck}",
+                "StatisticsDataNewFilter",
+                "IplFilter",
+                "RepeatedResultFilter",
+                "ProfileTagHindiFilter"
+            ],
+            "ruler": [
+                "AdvanceInterestTagRuler",
+                "PoolVideoMoveForwardRuler{poolPriority:[14]}"
+            ],
+            "mixer": [
+                "UgcLowLevelMixerRatioVersion",
+                "ListMixer{result:new_language,count:0.00067,type:in_order,skip:[NoSkip]}",
+                "SimilarRealMixer6RatioVersion",
+                "ListMixer{result:user_profile_din,count:0.15,type:in_order,skip:[NoSkip]}",
+                "InterestTagMixer",
+                "ExposurePoolMixer{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolMixer{result:profile_pool,skip:[NoSkip],p_tag:tag_short_lin_v1,category:cate_short_lin_v1}",
+                "ListMixer{result:pubg,count:0.034,type:in_order,skip:[NoSkip]}"
+            ],
+            "guaranteeMixer": [
+                "UgcHighLevelMixer"
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                "UserFeedResultCache"
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer",
+            "test_record": [
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "din模型实验"
+                }
+            ]
+        },
+        "L_5500_5999": {
+            "rankModel": "",
+            "ranker": "StandardRanker",
+            "prepare": [
+                "TagPrepare{name:tag_short_lin_v1,skip:[NoSkip],table:up_ml_tag_60d_v1,column:tag_profile,match:PTagMatch}",
+                "TagPrepare{name:cate_short_lin_v1,skip:[NoSkip],table:up_category_30d_v1,column:tag_profile,match:CategoryMatch}"
+            ],
+            "recall": [
+                "PoolRecall",
+                "UserProfileCassandraRecall{result:user_profile_din,table:personal_reco_din,skip:[NoSkip]}",
+                "UserProfileCassandraColumnRecall{result:user_profile_lv13,table:uuid_lv13_ml_tag_up_heat4,column:video_score,skip:[NoSkip]}",
+                "TrendingRealtimeV10WeightedByTime",
+                "NewLanguageConfigurableRecall{result:new_language}",
+                "ManualTopRecall1",
+                "InterestTagRecall",
+                "ExposurePoolRecall{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolRecall{result:profile_pool,skip:[NoSkip]}",
+                "SpecialUserProfileTagRedisRecall{result:pubg,tag:pubg,redis_key:tophot_ml_tag_v6_pubg}"
+            ],
+            "fallback": "RandomFallback",
+            "filter": [
+                "DeleteFilter",
+                "StandardFilter{skip:[InvalidClientVersionSkip],pass:[InvalidClientVersionCheck],test:ClientVersionFilterCheck}",
+                "OriginalFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageHindiFilter",
+                "LanguageMLTagsFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "BlockFilter",
+                "BadDescriptionFilter",
+                "StandardFilter{skip:[NoSkip],pass:[NoCheck],test:BadLikeInfoStatusCheck}",
+                "StatisticsDataNewFilter",
+                "IplFilter",
+                "RepeatedResultFilter",
+                "ProfileTagHindiFilter"
+            ],
+            "ruler": [
+                "AdvanceInterestTagRuler",
+                "PoolVideoMoveForwardRuler{poolPriority:[14]}"
+            ],
+            "mixer": [
+                "UgcLowLevelMixerRatioVersion",
+                "ListMixer{result:new_language,count:0.00067,type:in_order,skip:[NoSkip]}",
+                "SimilarRealMixer6RatioVersion",
+                "ListMixer{result:user_profile_din,count:0.15,type:in_order,skip:[NoSkip]}",
+                "InterestTagMixer",
+                "ExposurePoolMixer{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolMixer{result:profile_pool,skip:[NoSkip],p_tag:tag_short_lin_v1,category:cate_short_lin_v1}",
+                "ListMixer{result:pubg,count:0.034,type:in_order,skip:[NoSkip]}"
+            ],
+            "guaranteeMixer": [
+                "GuaranteeListMixer{result:user_profile_lv13,type:in_order,skip:[NoSkip]}",
+                "UgcHighLevelMixer"
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                "UserFeedResultCache"
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer",
+            "test_record": [
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "个性化13级池对照组"
+                },
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "13级v3实验"
+                }
+            ]
+        },
+        "M_6000_6499": {
+            "rankModel": "",
+            "ranker": "StandardRanker",
+            "prepare": [
+                "TagPrepare{name:tag_short_lin_v1,skip:[NoSkip],table:up_ml_tag_60d_v1,column:tag_profile,match:PTagMatch}",
+                "TagPrepare{name:cate_short_lin_v1,skip:[NoSkip],table:up_category_30d_v1,column:tag_profile,match:CategoryMatch}"
+            ],
+            "recall": [
+                "PoolRecall",
+                "UserProfileCassandraRecall{result:user_profile_din,table:personal_reco_din,skip:[NoSkip]}",
+                "UserProfileCassandraColumnRecall{result:user_profile_lv13,table:uuid_lv13_ml_tag_up_heat4,column:video_score,skip:[NoSkip]}",
+                "TrendingRealtimeV10WeightedByTime",
+                "NewLanguageConfigurableRecall{result:new_language}",
+                "ManualTopRecall1",
+                "InterestTagRecall",
+                "ExposurePoolRecall{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolRecall{result:profile_pool,skip:[NoSkip]}",
+                "SpecialUserProfileTagRedisRecall{result:pubg,tag:pubg,redis_key:tophot_ml_tag_v6_pubg}",
+                "UserProfileTagRedisRecall{result:user_profile_tag_redis,table:up_ml_tag_60d_v1,num:3,redis_key:tophot_ml_tag_v7_,skip:[NoSkip]}"
+            ],
+            "fallback": "RandomFallback",
+            "filter": [
+                "DeleteFilter",
+                "StandardFilter{skip:[InvalidClientVersionSkip],pass:[InvalidClientVersionCheck],test:ClientVersionFilterCheck}",
+                "OriginalFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageHindiFilter",
+                "LanguageMLTagsFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "BlockFilter",
+                "BadDescriptionFilter",
+                "StandardFilter{skip:[NoSkip],pass:[NoCheck],test:BadLikeInfoStatusCheck}",
+                "StatisticsDataNewFilter",
+                "IplFilter",
+                "RepeatedResultFilter",
+                "ProfileTagHindiFilter"
+            ],
+            "ruler": [
+                "AdvanceInterestTagRuler",
+                "PoolVideoMoveForwardRuler{poolPriority:[14]}"
+            ],
+            "mixer": [
+                "UgcLowLevelMixerRatioVersion",
+                "ListMixer{result:new_language,count:0.00067,type:in_order,skip:[NoSkip]}",
+                "SimilarRealMixer6RatioVersion",
+                "InterestTagMixer",
+                "ExposurePoolMixer{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolMixer{result:profile_pool,skip:[NoSkip],p_tag:tag_short_lin_v1,category:cate_short_lin_v1}",
+                "ListMixer{result:pubg,count:0.034,type:in_order,skip:[NoSkip]}",
+                "MultiListMixer{result:user_profile_tag_redis,count:0.066,type:in_order,skip:[NoSkip]}"
+            ],
+            "guaranteeMixer": [
+                "GuaranteeListMixer{result:user_profile_lv13,type:in_order,skip:[NoSkip]}",
+                "UgcHighLevelMixer"
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                "UserFeedResultCache"
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer",
+            "test_record": [
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "个性化13级池对照组"
+                },
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "13级v3实验"
+                }
+            ]
+        },
+        "N_6500_6999": {
+            "rankModel": "",
+            "ranker": "StandardRanker",
+            "prepare": [
+                "TagPrepare{name:tag_short_lin_v1,skip:[NoSkip],table:up_ml_tag_60d_v1,column:tag_profile,match:PTagMatch}",
+                "TagPrepare{name:cate_short_lin_v1,skip:[NoSkip],table:up_category_30d_v1,column:tag_profile,match:CategoryMatch}"
+            ],
+            "recall": [
+                "PoolRecall",
+                "UserProfileCassandraRecall{result:user_profile_din,table:personal_reco_din,skip:[NoSkip]}",
+                "UserProfileCassandraColumnRecall{result:user_profile_lv13,table:uuid_lv13_ml_tag_up_heat4,column:video_score,skip:[NoSkip]}",
+                "TrendingRealtimeV10WeightedByTime",
+                "NewLanguageConfigurableRecall{result:new_language}",
+                "ManualTopRecall1",
+                "InterestTagRecall",
+                "ExposurePoolRecall{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolRecall{result:profile_pool,skip:[NoSkip]}",
+                "SpecialUserProfileTagRedisRecall{result:pubg,tag:pubg,redis_key:tophot_ml_tag_v6_pubg}"
+            ],
+            "fallback": "RandomFallback",
+            "filter": [
+                "DeleteFilter",
+                "StandardFilter{skip:[InvalidClientVersionSkip],pass:[InvalidClientVersionCheck],test:ClientVersionFilterCheck}",
+                "OriginalFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageHindiFilter",
+                "LanguageMLTagsFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "BlockFilter",
+                "BadDescriptionFilter",
+                "StandardFilter{skip:[NoSkip],pass:[NoCheck],test:BadLikeInfoStatusCheck}",
+                "StatisticsDataNewFilter",
+                "IplFilter",
+                "RepeatedResultFilter",
+                "ProfileTagHindiFilter"
+            ],
+            "ruler": [
+                "AdvanceInterestTagRuler",
+                "PoolVideoMoveForwardRuler{poolPriority:[14]}"
+            ],
+            "mixer": [
+                "UgcLowLevelMixerRatioVersion",
+                "ListMixer{result:new_language,count:0.00067,type:in_order,skip:[NoSkip]}",
+                "SimilarRealMixer6RatioVersion",
+                "InterestTagMixer",
+                "ExposurePoolMixer{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolMixer{result:profile_pool,skip:[NoSkip],p_tag:tag_short_lin_v1,category:cate_short_lin_v1}",
+                "ListMixer{result:pubg,count:0.034,type:in_order,skip:[NoSkip]}"
+            ],
+            "guaranteeMixer": [
+                "GuaranteeListMixer{result:user_profile_lv13,type:in_order,skip:[NoSkip]}",
+                "UgcHighLevelMixer"
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                "UserFeedResultCache"
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer",
+            "test_record": [
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "个性化13级池对照组"
+                },
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "13级v3实验"
+                }
+            ]
+        },
+        "O_7000_7499": {
+            "rankModel": "",
+            "ranker": "StandardRanker",
+            "prepare": [
+                "TagPrepare{name:tag_short_lin_v1,skip:[NoSkip],table:up_ml_tag_60d_v1,column:tag_profile,match:PTagMatch}",
+                "TagPrepare{name:cate_short_lin_v1,skip:[NoSkip],table:up_category_30d_v1,column:tag_profile,match:CategoryMatch}"
+            ],
+            "recall": [
+                "PoolRecall",
+                "UserProfileCassandraRecall{result:user_profile_din,table:personal_reco_din,skip:[NoSkip]}",
+                "TrendingRealtimeV10WeightedByTime",
+                "NewLanguageConfigurableRecall{result:new_language}",
+                "ManualTopRecall1",
+                "InterestTagRecall",
+                "ExposurePoolRecall{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolRecall{result:profile_pool,skip:[NoSkip]}",
+                "SpecialUserProfileTagRedisRecall{result:pubg,tag:pubg,redis_key:tophot_ml_tag_v6_pubg}"
+            ],
+            "fallback": "RandomFallback",
+            "filter": [
+                "DeleteFilter",
+                "StandardFilter{skip:[InvalidClientVersionSkip],pass:[InvalidClientVersionCheck],test:ClientVersionFilterCheck}",
+                "OriginalFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageHindiFilter",
+                "LanguageMLTagsFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "BlockFilter",
+                "BadDescriptionFilter",
+                "StandardFilter{skip:[NoSkip],pass:[NoCheck],test:BadLikeInfoStatusCheck}",
+                "StatisticsDataNewFilter",
+                "IplFilter",
+                "RepeatedResultFilter",
+                "ProfileTagHindiFilter"
+            ],
+            "ruler": [
+                "AdvanceInterestTagRuler",
+                "PoolVideoMoveForwardRuler{poolPriority:[14]}"
+            ],
+            "mixer": [
+                "ExposurePoolMixer{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolMixer{result:profile_pool,skip:[NoSkip],p_tag:tag_short_lin_v1,category:cate_short_lin_v1}",
+                "UgcLowLevelMixerRatioVersion"
+            ],
+            "guaranteeMixer": [
+                "UgcHighLevelMixer"
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                "UserFeedResultCache"
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer",
+            "test_record": [
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "下掉全部个性化路"
+                }
+            ]
+        },
+        "P_7500_7999": {
+            "rankModel": "",
+            "ranker": "StandardRanker",
+            "prepare": [
+                "TagPrepare{name:tag_short_lin_v1,skip:[NoSkip],table:up_ml_tag_60d_v1,column:tag_profile,match:PTagMatch}",
+                "TagPrepare{name:cate_short_lin_v1,skip:[NoSkip],table:up_category_30d_v1,column:tag_profile,match:CategoryMatch}"
+            ],
+            "recall": [
+                "PoolRecall",
+                "UserProfileCassandraRecall{result:user_profile_din,table:personal_reco_din,skip:[NoSkip]}",
+                "TrendingRealtimeV10WeightedByTime",
+                "NewLanguageConfigurableRecall{result:new_language}",
+                "ManualTopRecall1",
+                "InterestTagRecall",
+                "ExposurePoolRecall{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolRecall{result:profile_pool,skip:[NoSkip]}",
+                "SpecialUserProfileTagRedisRecall{result:pubg,tag:pubg,redis_key:tophot_ml_tag_v6_pubg}"
+            ],
+            "fallback": "RandomFallback",
+            "filter": [
+                "DeleteFilter",
+                "StandardFilter{skip:[InvalidClientVersionSkip],pass:[InvalidClientVersionCheck],test:ClientVersionFilterCheck}",
+                "OriginalFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageHindiFilter",
+                "LanguageMLTagsFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "BlockFilter",
+                "BadDescriptionFilter",
+                "StandardFilter{skip:[NoSkip],pass:[NoCheck],test:BadLikeInfoStatusCheck}",
+                "StatisticsDataNewFilter",
+                "IplFilter",
+                "RepeatedResultFilter",
+                "ProfileTagHindiFilter"
+            ],
+            "ruler": [
+                "AdvanceInterestTagRuler",
+                "PoolVideoMoveForwardRuler{poolPriority:[14]}"
+            ],
+            "mixer": [
+                "UgcLowLevelMixerRatioVersion",
+                "ListMixer{result:new_language,count:0.00067,type:in_order,skip:[NoSkip]}",
+                "SimilarRealMixer6RatioVersion",
+                "InterestTagMixer",
+                "ExposurePoolMixer{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolMixer{result:profile_pool,skip:[NoSkip],p_tag:tag_short_lin_v1,category:cate_short_lin_v1}",
+                "ListMixer{result:pubg,count:0.034,type:in_order,skip:[NoSkip]}"
+            ],
+            "guaranteeMixer": [
+                "UgcHighLevelMixer"
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                "UserFeedResultCache"
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer",
+            "test_record": [
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "个性化13级池对照组"
+                },
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "13级v3实验"
+                }
+            ]
+        },
+        "Q_8000_8499": {
+            "rankModel": "",
+            "ranker": "StandardRanker",
+            "prepare": [
+                "TagPrepare{name:tag_short_lin_v1,skip:[NoSkip],table:up_ml_tag_60d_v1,column:tag_profile,match:PTagMatch}",
+                "TagPrepare{name:cate_short_lin_v1,skip:[NoSkip],table:up_category_30d_v1,column:tag_profile,match:CategoryMatch}"
+            ],
+            "recall": [
+                "PoolRecall",
+                "UserProfileCassandraRecall{result:user_profile_din,table:personal_reco_din,skip:[NoSkip]}",
+                "TrendingRealtimeV10WeightedByTime",
+                "NewLanguageConfigurableRecall{result:new_language}",
+                "ManualTopRecall1",
+                "InterestTagRecall",
+                "ExposurePoolRecall{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolRecall{result:profile_pool,skip:[NoSkip]}",
+                "SpecialUserProfileTagRedisRecall{result:pubg,tag:pubg,redis_key:tophot_ml_tag_v6_pubg}"
+            ],
+            "fallback": "RandomFallback",
+            "filter": [
+                "DeleteFilter",
+                "StandardFilter{skip:[InvalidClientVersionSkip],pass:[InvalidClientVersionCheck],test:ClientVersionFilterCheck}",
+                "OriginalFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageHindiFilter",
+                "LanguageMLTagsFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "BlockFilter",
+                "BadDescriptionFilter",
+                "StandardFilter{skip:[NoSkip],pass:[NoCheck],test:BadLikeInfoStatusCheck}",
+                "StatisticsDataNewFilter",
+                "IplFilter",
+                "RepeatedResultFilter",
+                "ProfileTagHindiFilter"
+            ],
+            "ruler": [
+                "AdvanceInterestTagRuler",
+                "PoolVideoMoveForwardRuler{poolPriority:[14]}"
+            ],
+            "mixer": [
+                "UgcLowLevelMixerRatioVersion",
+                "ListMixer{result:new_language,count:0.00067,type:in_order,skip:[NoSkip]}",
+                "SimilarRealMixer6RatioVersion",
+                "ListMixer{result:user_profile_din,count:0.15,type:in_order,skip:[NoSkip]}",
+                "InterestTagMixer",
+                "ExposurePoolMixer{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolMixer{result:profile_pool,skip:[NoSkip],p_tag:tag_short_lin_v1,category:cate_short_lin_v1}",
+                "ListMixer{result:pubg,count:0.034,type:in_order,skip:[NoSkip]}"
+            ],
+            "guaranteeMixer": [
+                "UgcHighLevelMixer"
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                "UserFeedResultCache"
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer",
+            "test_record": [
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "13级v3实验"
+                }
+            ]
+        },
+        "R_8500_8999": {
+            "rankModel": "",
+            "ranker": "StandardRanker",
+            "prepare": [
+                "TagPrepare{name:tag_short_lin_v1,skip:[NoSkip],table:up_ml_tag_60d_v1,column:tag_profile,match:PTagMatch}",
+                "TagPrepare{name:cate_short_lin_v1,skip:[NoSkip],table:up_category_30d_v1,column:tag_profile,match:CategoryMatch}"
+            ],
+            "recall": [
+                "PoolRecall",
+                "UserProfileCassandraRecall{result:user_profile_din,table:personal_reco_din,skip:[NoSkip]}",
+                "TrendingRealtimeV10WeightedByTime",
+                "NewLanguageConfigurableRecall{result:new_language}",
+                "ManualTopRecall1",
+                "InterestTagRecall",
+                "ExposurePoolRecall{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolRecall{result:profile_pool,skip:[NoSkip]}",
+                "SpecialUserProfileTagRedisRecall{result:pubg,tag:pubg,redis_key:tophot_ml_tag_v6_pubg}"
+            ],
+            "fallback": "RandomFallback",
+            "filter": [
+                "DeleteFilter",
+                "StandardFilter{skip:[InvalidClientVersionSkip],pass:[InvalidClientVersionCheck],test:ClientVersionFilterCheck}",
+                "OriginalFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageHindiFilter",
+                "LanguageMLTagsFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "BlockFilter",
+                "BadDescriptionFilter",
+                "StandardFilter{skip:[NoSkip],pass:[NoCheck],test:BadLikeInfoStatusCheck}",
+                "StatisticsDataNewFilter",
+                "IplFilter",
+                "RepeatedResultFilter",
+                "ProfileTagHindiFilter"
+            ],
+            "ruler": [
+                "AdvanceInterestTagRuler",
+                "PoolVideoMoveForwardRuler{poolPriority:[14]}"
+            ],
+            "mixer": [
+                "UgcLowLevelMixerRatioVersion",
+                "ListMixer{result:new_language,count:0.00067,type:in_order,skip:[NoSkip]}",
+                "SimilarRealMixer6RatioVersion",
+                "ListMixer{result:user_profile_din,count:0.15,type:in_order,skip:[NoSkip]}",
+                "InterestTagMixer",
+                "ExposurePoolMixer{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolMixer{result:profile_pool,skip:[NoSkip],p_tag:tag_short_lin_v1,category:cate_short_lin_v1}",
+                "ListMixer{result:pubg,count:0.034,type:in_order,skip:[NoSkip]}"
+            ],
+            "guaranteeMixer": [
+                "UgcHighLevelMixer"
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                "UserFeedResultCache"
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer",
+            "test_record": [
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "暂无"
+                }
+            ]
+        },
+        "S_9000_9499": {
+            "rankModel": "",
+            "ranker": "StandardRanker",
+            "prepare": [
+                "TagPrepare{name:tag_short_lin_v1,skip:[NoSkip],table:up_ml_tag_60d_v1,column:tag_profile,match:PTagMatch}",
+                "TagPrepare{name:cate_short_lin_v1,skip:[NoSkip],table:up_category_30d_v1,column:tag_profile,match:CategoryMatch}"
+            ],
+            "recall": [
+                "PoolRecall",
+                "UserProfileCassandraRecall{result:user_profile_din,table:personal_reco_din,skip:[NoSkip]}",
+                "TrendingRealtimeV10WeightedByTime",
+                "NewLanguageConfigurableRecall{result:new_language}",
+                "ManualTopRecall1",
+                "InterestTagRecall",
+                "ExposurePoolRecall{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolRecall{result:profile_pool,skip:[NoSkip]}",
+                "SpecialUserProfileTagRedisRecall{result:pubg,tag:pubg,redis_key:tophot_ml_tag_v6_pubg}"
+            ],
+            "fallback": "RandomFallback",
+            "filter": [
+                "DeleteFilter",
+                "StandardFilter{skip:[InvalidClientVersionSkip],pass:[InvalidClientVersionCheck],test:ClientVersionFilterCheck}",
+                "OriginalFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageHindiFilter",
+                "LanguageMLTagsFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "BlockFilter",
+                "BadDescriptionFilter",
+                "StandardFilter{skip:[NoSkip],pass:[NoCheck],test:BadLikeInfoStatusCheck}",
+                "StatisticsDataNewFilter",
+                "IplFilter",
+                "RepeatedResultFilter",
+                "ProfileTagHindiFilter"
+            ],
+            "ruler": [
+                "AdvanceInterestTagRuler",
+                "PoolVideoMoveForwardRuler{poolPriority:[14]}"
+            ],
+            "mixer": [
+                "ExposurePoolMixer{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolMixer{result:profile_pool,skip:[NoSkip],p_tag:tag_short_lin_v1,category:cate_short_lin_v1}",
+                "UgcLowLevelMixerRatioVersion"
+            ],
+            "guaranteeMixer": [
+                "UgcHighLevelMixer"
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                "UserFeedResultCache"
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer",
+            "test_record": [
+                {
+                    "operator": "",
+                    "owner": "",
+                    "update_time": "2021-06-2311:11",
+                    "description": "下掉全部个性化路"
+                }
+            ]
+        },
+        "T_9500_9999": {
+            "rankModel": "",
+            "ranker": "StandardRanker",
+            "prepare": [
+                "TagPrepare{name:tag_short_lin_v1,skip:[NoSkip],table:up_ml_tag_60d_v1,column:tag_profile,match:PTagMatch}",
+                "TagPrepare{name:cate_short_lin_v1,skip:[NoSkip],table:up_category_30d_v1,column:tag_profile,match:CategoryMatch}"
+            ],
+            "recall": [
+                "PoolRecall",
+                "UserProfileCassandraRecall{result:user_profile_din,table:personal_reco_din,skip:[NoSkip]}",
+                "TrendingRealtimeV10WeightedByTime",
+                "NewLanguageConfigurableRecall{result:new_language}",
+                "ManualTopRecall1",
+                "InterestTagRecall",
+                "ExposurePoolRecall{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolRecall{result:profile_pool,skip:[NoSkip]}",
+                "SpecialUserProfileTagRedisRecall{result:pubg,tag:pubg,redis_key:tophot_ml_tag_v6_pubg}"
+            ],
+            "fallback": "RandomFallback",
+            "filter": [
+                "DeleteFilter",
+                "StandardFilter{skip:[InvalidClientVersionSkip],pass:[InvalidClientVersionCheck],test:ClientVersionFilterCheck}",
+                "OriginalFilter",
+                "UserRecommendHistoryFilter",
+                "UserRecommendBloomFilter",
+                "OfflineStatusFilter",
+                "LanguageHindiFilter",
+                "LanguageMLTagsFilter",
+                "UGCSensitiveContentFilter",
+                "PublisherBlockFilter",
+                "AdVideoFilter",
+                "ViewPrivacyFilter",
+                "CountryFilter",
+                "PrivateAccountFilter",
+                "BlockFilter",
+                "BadDescriptionFilter",
+                "StandardFilter{skip:[NoSkip],pass:[NoCheck],test:BadLikeInfoStatusCheck}",
+                "StatisticsDataNewFilter",
+                "IplFilter",
+                "RepeatedResultFilter",
+                "ProfileTagHindiFilter"
+            ],
+            "ruler": [
+                "AdvanceInterestTagRuler",
+                "PoolVideoMoveForwardRuler{poolPriority:[14]}"
+            ],
+            "mixer": [
+                "UgcLowLevelMixerRatioVersion",
+                "ListMixer{result:new_language,count:0.00067,type:in_order,skip:[NoSkip]}",
+                "SimilarRealMixer6RatioVersion",
+                "ListMixer{result:user_profile_din,count:0.15,type:in_order,skip:[NoSkip]}",
+                "InterestTagMixer",
+                "ExposurePoolMixer{result:exposure_pool,skip:[NoSkip]}",
+                "ProfilePoolMixer{result:profile_pool,skip:[NoSkip],p_tag:tag_short_lin_v1,category:cate_short_lin_v1}",
+                "ListMixer{result:pubg,count:0.034,type:in_order,skip:[NoSkip]}"
+            ],
+            "guaranteeMixer": [
+                "UgcHighLevelMixer"
+            ],
+            "getFeature": [
+                
+            ],
+            "scorer": [
+                
+            ],
+            "adjuster": [
+                
+            ],
+            "cache": [
+                "UserFeedResultCache"
+            ],
+            "cacheForRecall": [
+                
+            ],
+            "packer": "Mx_Recommend_Main_Packer",
+            "test_record": [
+                
+            ]
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "range": {
+    "0-9999": "mx_videonum_of_the_private_publisher_version_1_0"
+  },
+  "flow": {
+    "mx_videonum_of_the_private_publisher_version_1_0": {
+      "rankModel": "",
+      "ranker": "",
+      "recall": [
+        "GetVideoNumOfPrivatePublisherRecall"
+      ],
+      "filter": [
+      ],
+      "ruler": [
+      ],
+      "mixer": [],
+      "getFeature": [],
+      "scorer": [],
+      "adjuster": [
+      ],
+      "cache": [],
+      "cacheForRecall": [],
+      "packer": "Mx_Recommend_Other_Packer"
+    }
+  }
+}

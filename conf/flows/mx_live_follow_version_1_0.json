@@ -1,0 +1,32 @@
+{
+  "range": {
+    "0-9999": "mx_live_follow_version_1_0"
+  },
+  "flow": {
+    "mx_live_follow_version_1_0": {
+      "rankModel": "",
+      "ranker": "LiveStreamRanker",
+      "recall": [
+        "LiveStreamFollowRecall"
+      ],
+      "filter": [
+        "BlockFilter"
+      ],
+      "ruler": [
+        "LivePageResultRuler"
+      ],
+      "pool": [],
+      "mixer": [],
+      "getFeature": [],
+      "scorer": [
+        "LiveManualScore"
+      ],
+      "adjuster": [],
+      "cache": [],
+      "cacheForRecall": [
+        ""
+      ],
+      "packer": "Mx_Recommend_Live_Packer"
+    }
+  }
+}
