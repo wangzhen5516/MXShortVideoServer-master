@@ -137,7 +137,7 @@ public class SpecialPoolRecall extends BaseRecall<BaseDataCollection>{
     }
 
     private void record(BaseDataCollection dc, int size, String from) {
-        dc.syncSearchResultSizeMap.put(this.getName()+"_"+this.getResultKey(), size);
+        dc.syncSearchResultSizeMap.put(this.getName()+"ssss"+this.getResultKey(), size);
         dc.resultFromMap.put(this.getName(), from);
 
       //  String key = String.format("%s_%s", this.getName(), "category");
